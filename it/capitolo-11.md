@@ -55,7 +55,7 @@ public function provideUrls()
  Apparentemente potrebbe sembrare inutile ma considerando quanto poco sforzo viene fatto,
  è sempre un bene avere il test nella vostra applicazione.
 
- #####Hardcodare gli URL nei test funzionali
+##### Hardcodare gli URL nei test funzionali
 
  Alcuni di voi si staranno chiedendo perchè nel precedente test funzionale non viene usato
  il servizio di generazione degli URL.
@@ -96,6 +96,6 @@ Ovviamente se la tua applicazione usa Javascript in tutte le sue funzionalità
 
 ####Saperne di più sui Test Funzionali
 
-Usa le librerie [Faker(https://github.com/fzaninotto/Faker) e
+Usa le librerie [Faker](https://github.com/fzaninotto/Faker) e
 [Alice](https://github.com/nelmio/alice) per la generazione dei dati delle fixture.
 
