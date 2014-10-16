@@ -1,15 +1,15 @@
 #Capitolo 6
 ## I Template
 
-Quando è stato creato il PHP, 20 anni fa, gli sviluppatori rimasero incantati dalla sua semplicità
+Quando è nato il PHP, 20 anni fa, gli sviluppatori rimasero incantati dalla sua semplicità
 e dalla possibilità di mescolare facilamente HTML e codice dinamico.
 Con il passare del tempo sono nati tanti linguaggi per i template - come [Twig](http://twig.sensiolabs.org/) -
-in grado di gestire i template dell'applicazione in modo perfino migliore.
+in grado di gestire i template dell'applicazione in modo migliore.
 
 **Best Practice**
 Usa Twig per i tuoi template
 
-Generalmente parlando, i template in PHP sono molto più prolissi di Twig per
+Generalmente parlando, i template in PHP sono più prolissi di Twig per
 la mancanza di supporto nativo a molte caratteristiche moderne necessarie nei template moderni,
 come l'ereditarietà, l'escaping automatico, i filtri.
 
@@ -27,12 +27,12 @@ Inserisci tutti i template della tua applicazione nella directory **app/Resource
 
 Solitamente gli sviluppatori Symfony mettono i template dell'applicazione nella directory
 **Resources/views/** di ciascun bundle. Per riferirsi ad essi usano il nome logico
-(ad es. **AcmeDemoBundle:Default:index.html.twig).
+(ad es. **AcmeDemoBundle:Default:index.html.twig**).
 
 Anche se quest'abitudine è corretta per i bundle di terzi, è molto più conveniente, invece,
 inserire i template dell'applicazione nella directory **app/Resources/views/**.
 
-Come prima cosa ciò semplifica drasticamente il nome logico dei template:
+Innanzitutto questo semplifica drasticamente il nome logico dei template:
 
 | **Template dentro i bundle**                  | **Template dentro app/**       |
 |-----------------------------------------------|--------------------------------|
