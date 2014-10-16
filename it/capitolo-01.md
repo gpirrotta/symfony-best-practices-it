@@ -1,7 +1,7 @@
 #Capitolo 1
 ## Best Practices del framework Symfony
 
-Il framework Symfony è conosciuto per essere molto flessibile, in quanto è utilizzato in ambiti diversi come piccoli siti web, applicazioni aziendali che servono miliardi di richieste e anche come base per altri framework. 
+Symfony è conosciuto per essere un framework molto flessibile; esso è infatti utilizzato in ambiti diversi come piccoli siti web, applicazioni aziendali che servono miliardi di richieste ma anche come base per altri framework. 
 
 Da quando è stato pubblicato nel luglio 2011, la comunità Symfony ha percorso un lungo cammino di apprendimento, sia per quanto riguarda ciò che Symfony è in grado di fare, sia qual è il modo migliore per farlo.
 
@@ -17,11 +17,11 @@ Lo scopo di questa guida è quello di risolvere il problema sopra menzionato sta
 Sappiamo che le vecchie abitudini sono dure a morire e alcuni di voi potreste meravigliarvi o non essere d'accordo con alcune di queste regole. Nonostante ciò, crediamo che seguendo questi consigli potrete sviluppare le applicazioni più velocemente, con una minore complessità e con la stessa o perfino una migliore qualità. Inoltre le raccomandazioni saranno continuamente aggiornate e migliorate.
 
 
-In ogni caso, considerate che queste raccomandazioni sono opzionali e che tu e il tuo team potete o non potete seguire. Se preferite continuare a sviluppare utilizzando le vostre practiche e metodologie, continuate a farlo. Symfony è abbastanza flessibile da adattarsi alle vostre necessità e questo non cambierà mai.
+In ogni caso, considerate che queste raccomandazioni sono opzionali e che voi e il vostro team potete come non potete seguire. Se preferite continuare a sviluppare utilizzando le vostre practiche e metodologie, continuate a farlo. Symfony è abbastanza flessibile da adattarsi alle vostre necessità e questo non cambierà mai.
 
 
 ### A chi è rivolto il libro? (Nota: non è un Tutorial)
-Questa guida è pensata per qualsiasi sviluppatore Symfony, sia esperto che principiante. Non essendo un tutorial passo passo, però, è necessaria una conoscenza basilare di Symfony per poterla seguire al meglio. Se sei proprio agli inizi, benvenuto nella comunità. Inizia però prima con il tutorial [*The Quick Tour*](http://symfony.com/doc/current/quick_tour/the_big_picture.html). 
+Questa guida è pensata per qualsiasi sviluppatore Symfony, sia esperto che principiante. Non essendo un tutorial passo passo, però, è necessaria una conoscenza basilare di Symfony, per seguire la guida al meglio. Se sei proprio agli inizi, benvenuto nella comunità. Inizia però prima con il tutorial [*The Quick Tour*](http://symfony.com/doc/current/quick_tour/the_big_picture.html). 
 
 Inoltre abbiamo deciso di mantenere questa guida il più breve possibile, per essere molto facile da leggere. Non ripeteremo quindi spiegazioni che si possono trovare nella vasta documentazione ufficiale di Symfony, come discussioni sulla **dependency injection** o sul **front controller**. Ci soffermeremo unicamente a spiegare come fare ciò che già sai.
 
