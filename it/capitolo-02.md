@@ -3,7 +3,7 @@
 
 ####Installazione di Symfony
 
-Esiste solamente un modo che raccomandiamo per l'installazione Symfony
+Esiste solamente un modo che raccomandiamo per l'installazione di Symfony
 
 **BEST PRACTICE**  
 **Utilizzare sempre [*Composer*](https://getcomposer.org) per installare Symfony**
