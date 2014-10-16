@@ -77,7 +77,7 @@ backend Symfony (e anche separato dai repository).
 Assettic è in grado di migliorare la velocità dei siti   mininizzarndo asset CSS e Javascript
 tramite [*UglifyCSS/UglifyJS*](http://symfony.com/doc/current/cookbook/assetic/uglifyjs.html).
 E' possibile anche [comprimere immagini](http://symfony.com/doc/current/cookbook/assetic/jpeg_optimize.html)
-riducendone la dimensione prima di essere restituiti all'utente.
+riducendone la dimensione prima di essere restituiti nelle richieste.
 
 Per saperne di più su tutte le funzionalità disponibili fare riferimento alla
 [documentazione ufficiale](https://github.com/kriswallsmith/assetic).
