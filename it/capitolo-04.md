@@ -10,7 +10,7 @@ non relativo al framework (ad es. routing e controller). Le classi di dominio, l
 regolari classi PHP utilizzate come servizi rappresentano buoni esempi di logica di business.
 
 Nella maggior parte dei progetti la logica di business dovrebbe essere inserita dentro **AppBundle**.
-All'interno del bundle è possibile creare qualsiasi struttura di directory per organizzare il tutto..
+All'interno del bundle è possibile creare qualsiasi gerarchia di directory come struttura organizzativa.
 
 
 ```
@@ -25,8 +25,8 @@ symfoy2-project/
 ```
 
 #### Creare classi fuori dal bundle
-Non vi è alcuna limitazione tecnica che non possa consentire di mettere la logica di business
-fuori da qualsiasi bundle. Se si vuole si può creare il proprio namespace
+Non vi è alcuna limitazione tecnica che ci impedisca di mettere la logica di business
+fuori dal bundle. Se si vuole si può creare il proprio namespace
 dentro **src/** e mettere tutto là dentro:
 
 ```
@@ -83,7 +83,7 @@ services:
 Per la definizione dei nomi dei servizi solitamente si sceglie
 di utilizzare il nome e la posizione della classe per evitare collisioni di nomi.
 Pertanto il servizio dovrebbe chiamarsi **app.utils.slugger**.
-Tuttavia se si usano nomi dei servizi brevi il codice sarà più facile da leggere e usare.
+Tuttavia se si usano nomi dei servizi brevi il codice risulterà più facile da leggere e da usare.
 
 **Best Practice**
 Il nome dei servizi dovrebbe essere il più breve possibile,
@@ -116,10 +116,10 @@ Sappiamo che questa raccomandazione è molto controversa.
 Dalla nostra esperienza sia il formato YAML che il formato XML risulta
 ugualmente utilizzato tra gli sviluppatori, con una leggere preferenza verso YAML.
 Entrambi i formati hanno le stesse performance, quindi la scelta di quale utilizzare
-è una questione di gusto personale.
+è una questione di gusti personali.
 
-Raccomandiamo di usare YAML perchè è più semplice da gestire per i nuovi
-programmatori e più concisa. Ovviamente tu puoi usare il formato che preferisci.
+Noi raccomandiamo di usare YAML perchè risulta più semplice da gestire ai nuovi
+programmatori sia più concisa. Ovviamente puoi usare il formato che preferisci.
 
 #### Non definire parametri per le classi dei servizi
 
@@ -158,8 +158,8 @@ E' possibile quindi scegliere la libreria o strategia preferita
 per colmare questa carenza.
 
 In pratica però molte applicazioni Symfony usano [Doctrine](http://www.doctrine-project.org/)
-per definire il loro modello tramite entity e repository. Allo stesso modo della logica di business
-si raccomanda di creare le entity di Doctrine in **AppBundle**
+per definire il loro modello tramite entity e repository. Così come per la logica di business
+si raccomanda di creare le entity di Doctrine nella directory **AppBundle**
 
 Le tre entity definite dalla nostra applicazione blog sono un buon esempio di come rappresentare
 le nostre classi:
@@ -189,7 +189,7 @@ Usare le annotazioni per definire il mapping delle entità Doctrine
 Le annotazioni sono di gran lunga il modo più conveniente e agile per definire e cercare
 le informazioni di mapping:
 
-```
+```php
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -309,7 +309,8 @@ Careful, database will be purged. Do you want to continue Y/N ? Y
 #### Coding Standard
 Il codice sorgente di Symfony rispetta gli standard [*PSR-1*](http://www.php-fig.org/psr/psr-1/)
 e [*PSR-2*](http://www.php-fig.org/psr/psr-2/) definiti dalla comunità PHP.
-E' possibile saperne di più sul [*Symfony Code Standard*](http://symfony.com/doc/current/contributing/code/standards.html).
+Per saperne di più clicca su [*Symfony Code Standard*](http://symfony.com/doc/current/contributing/code/standards.html).
+
 Inoltre è possibile usare il tool [*PHP-CS-Fixer*](https://github.com/fabpot/PHP-CS-Fixer), una utility
 a riga di comando in grado di riformattare tutto il codice sorgente
 dell'applicazione in pochi secondi.
