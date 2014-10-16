@@ -3,7 +3,7 @@
 
 ####Installazione di Symfony
 
-C'è un solo modo raccomandato per installare Symfony
+Esiste solamente un modo che raccomandiamo per l'installazione Symfony
 
 **BEST PRACTICE**  
 **Utilizzare sempre [*Composer*](https://getcomposer.org) per installare Symfony**
@@ -64,29 +64,29 @@ php app/check.php
 
 Eseguendo lo script *check.php*, a seconda del sistema, è possibile visualizzare due elenchi differenti.
 Il primo mostra i requisiti obbligatori che il sistema deve soddisfare per far funzionare l'applicazione Symfony.
-Il secondo mostra i requisiti opzionali suggeriti per un'esecuzione optimale dell'applicazione:
+Il secondo mostra i requisiti opzionali suggeriti per un'esecuzione ottimale dell'applicazione:
 
 ```
 Symfony2 Requirements Checker
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 > PHP is using the following php.ini file:
 /usr/local/zend/etc/php.ini
 
-> Checking Symfony requirements:
+   > Checking Symfony requirements:
    .....E.........................W.....
 
 [ERROR]
 Your system is not ready to run Symfony2 projects
 
 Fix the following mandatory requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * date.timezone setting must be set
   > Set the "date.timezone" setting in php.ini* (like Europe/Paris).
 
 Optional recommendations to improve your setup
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * short_open_tag should be disabled in php.ini
   > Set short_open_tag to off in php.ini*.
@@ -113,7 +113,7 @@ blog/
 └─ web/
 ```
 
-Questa gerarchia di file e directory è la convenzione proposta da Symfony per organizzare la vostra applicazione.
+Questa gerarchia di file e directory è la struttura proposta da Symfony per organizzare la vostra applicazione.
 Lo scopo di ciascuna directory è il seguente:
 
 * **app/cache/** contiene tutti i file di cache generati dall'applicazione;
@@ -127,7 +127,7 @@ e tutta la logica di business;
 
 
 ##### I Bundle dell'Applicazione
-Quando Symfony 2.0 è stato rilasciato la maggior parte di sviluppatori hanno adottato, in modo naturale, lo stesso approccio usato
+Quando è stato rilasciato Symfony 2.0 la maggior parte di sviluppatori hanno adottato, in modo naturale, lo stesso approccio usato
 in symfony 1.x suddividendo l'applicazione in moduli logici. Proprio per questo, molte applicazioni Symfony
 definiscono bundle come:  **UserBundle**, **ProductBundle**, **InvoiceBundle**, etc.
 
@@ -144,9 +144,9 @@ da capire. A partire da Symfony 2.6 la documentazione ufficiale di Symfony mostr
  con il bundle **AppBundle**
 
 Non è necessario aggiungere il prefisso della vostra azienda (*vendor*) ad **AppBundle** (es. **AcmeAppBundle**) dato
-che il questo bundle, specifico dell'applicazione, non verrà mai condiviso con terzi.
+che questo bundle, specifico dell'applicazione, non verrà mai condiviso con terzi.
 
-Con tutto ciò la struttura di directory raccomandata di un'applicazione Symfony è la seguente:
+Detto questo la struttura di directory raccomandata di un'applicazione Symfony è la seguente:
 
 ```
 blog/
@@ -176,7 +176,7 @@ Se il tuo progetto o la tua infrastruttura richiede alcune modifiche alla strutt
 è possibile effettuare l'[overriding della posizione delle principali directory](http://symfony.com/doc/current/cookbook/configuration/override_dir_structure.html):
 **cache/**, **logs/** and **web/**.
 
-Inoltre, Symfony3 userà una struttura di directory leggermente diversa quando sarà rilasciato:
+Symfony3, inoltre, userà una struttura di directory leggermente diversa quando sarà rilasciato:
 
 ```
 blog-symfony3/
