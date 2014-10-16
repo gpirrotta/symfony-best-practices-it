@@ -18,7 +18,7 @@ a cura di Giovanni Pirrotta
     * L'applicazione
 
 
-2. **La creazione del progetto**
+2. [**La creazione del progetto**](/it/capitolo-02.md)
     * Installazione di Symfony
     * Creazione dell'applicazione Blog
     * Strutturare l'applicazione
@@ -26,7 +26,7 @@ a cura di Giovanni Pirrotta
     * Estendere la struttura delle directory
 
 
-3. **La configurazione**
+3. [**La configurazione**](/it/capitolo-03.md)
     * Configurazione relativa all'infrastruttura
     * Configurazione relativa all'applicazione
     * Non usare la configurazione semantica
@@ -34,7 +34,7 @@ a cura di Giovanni Pirrotta
 
 
 
-4. **Organizzare la logica di business**
+4. [**Organizzare la logica di business**](/it/capitolo-04.md)
     * Creare classi fuori dal bundle
     * Nomi e formati dei servizi
     * Il formato del file di configurazione YAML
@@ -44,7 +44,7 @@ a cura di Giovanni Pirrotta
     * Coding Standard
 
 
-5. **I Controller**
+5. [**I Controller**](/it/capitolo-05.md)
     * Configurazione delle rotte
     * Configurazione del template
     * Come dovrebbe essere il controller
@@ -52,26 +52,26 @@ a cura di Giovanni Pirrotta
     * Esecuzione di codice prima e dopo del controller
 
 
-6. **I Template**
+6. [**I Template**](/it/capitolo-06.md)
     * Posizione dei template
     * Estensioni Twig
 
 
-7. **I Form**
+7. [**I Form**](/it/capitolo-07.md)
     * Creazione dei form
     * Configurazione dei Button
     * Renderizzare il form
     * Gestione del submit
 
 
-8. **L'Internazionalizzazione**
+8. [**L'Internazionalizzazione**](/it/capitolo-08.md)
     * Formato dei file di traduzione
     * La posizione dei file di traduzione
     * Definizione di chiavi per le traduzioni
     * Esempio di file di traduzione
 
 
-9. **La Sicurezza**
+9. [**La Sicurezza**](/it/capitolo-09.md)
     * Autenticazione e firewall
     * Autorizzazione
     * L'annotazione @Security
@@ -80,13 +80,13 @@ a cura di Giovanni Pirrotta
     * Saperne di più
 
 
-10. **I Web Assets**
+10. [**I Web Assets**](/it/capitolo-10.md)
     * Usare Assetic
     * Applicazioni frontend-based
     * Saperne di più su Assetic
 
 
-11. **I Test**
+11. [**I Test**](/it/capitolo-11.md)
     * Test unitari
     * Test funzionali
     * Testare Javascript
