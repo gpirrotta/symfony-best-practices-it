@@ -8,12 +8,12 @@ Authors:
 
 
 ###Italian Translation
-a cura di Giovanni Pirrotta - [@gpirrotta](https://twitter.com/gpirrotta)
+Giovanni Pirrotta - [@gpirrotta](https://twitter.com/gpirrotta)
 
 ## Uno sguardo al contenuto
 
 1. [**Best Practices del Framework Symfony**](/it/capitolo-01.md)
-    * Cos'è questa guida?
+    * In cosa consiste questa guida?
     * A chi è rivolto il libro?
     * L'applicazione di esempio
 
