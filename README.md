@@ -12,7 +12,7 @@ a cura di Giovanni Pirrotta
 
 ## Uno sguardo al contenuto
 
-1. **Best Practices del Framework Symfony**
+1. [**Best Practices del Framework Symfony**](/it/capitolo-01.md)
     * Cos'è questa guida?
     * A chi è rivolto il libro?
     * L'applicazione
