@@ -2,10 +2,10 @@
 ## L'Internazionalizzazione
 
 L'internazionalizzazione e la localizzazione hanno come obiettivo quello di adattare
- l'applicazione e il suo contenuto ad una specifica regione o alla lingua dei suoi utenti.
+ l'applicazione e il suo contenuto ad una specifica nazione o alla lingua dei suoi utenti.
 In Symfony questa funzionalità è opzionale e per poter essere utilizzata bisogna prima abilitarla.
-Per fare quest togliere il commento all'opzione di configurazione `translator` settando la
-la localit di default dell'applicazione:
+Per fare questo togliere il commento all'opzione di configurazione `translator` settando la
+la località di default dell'applicazione:
 
 ```
 # app/config/config.yml
@@ -34,12 +34,12 @@ supportati nei tool usati dai traduttori professionali. Poichè XLIFF è basato 
 Symfony 2.6 ha aggiunto il supporto per le note e commenti all'interno dei file XLIFF,
 rendendoli più user-friendly per i traduttori.
 Dato che una buona traduzione dipende fortemente dal contesto le note del formato XLIFF
-rappresentano il posto migliore per contenere queste informazioni sul contesto.
+rappresentano il posto migliore per contenere queste informazioni.
 
 
 Il bundle [*JMSTranslationBundle*](https://github.com/schmittjoh/JMSTranslationBundle),
 sotto licenza Apache, fornisce un'interfaccia Web per la visualizzazione e la modifica
-dei file di traduzione. Inoltre dispone di un strumento avanzato in grado di leggere il tuo
+dei file di traduzione. Inoltre dispone di uno strumento avanzato in grado di leggere il tuo
 progetto, estrarre il testo da tradurre dai template e automaticamente aggiornare i file XLIFF.
 
 #### La posizione dei file di traduzione
@@ -70,8 +70,7 @@ e non `edit_form.label.username`.
 
 #### Esempio di file di traduzione
 
-Applicando tutte le best practice precedenti, un file di traduzione di esempio,
-per la lingua inglese, sarà:
+Applicando tutte le best practice precedenti, un file di traduzione di esempio per la lingua inglese sarà:
 
 ```
 <!-- app/Resources/translations/messages.en.xliff -->
