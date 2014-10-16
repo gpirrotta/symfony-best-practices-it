@@ -1,5 +1,5 @@
 
-## Official Symfony Best Practices
+## [Official Symfony Best Practices](http://symfony.com/doc/current/best_practices/index.html)
 
 Authors:
  * Fabien Potencier
