@@ -94,6 +94,9 @@ a cura di Giovanni Pirrotta
 
 
 
+
+## License
+
 This work is licensed under the “Attribution-Share Alike 3.0 Unported” license [(http://creativecommons.org/
 licenses/by-sa/3.0/)](http://creativecommons.org/licenses/by-sa/3.0/).
 You are free **to share** (to copy, distribute and transmit the work), and **to remix** (to adapt the work) under the
