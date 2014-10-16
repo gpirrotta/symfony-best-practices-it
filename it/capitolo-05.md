@@ -8,7 +8,7 @@ per coordinare le diversi parti dell'applicazione.
 La regola d'oro per i controller è sintetizzata nella tripla 5-10-20.
 Ogni controller dovrebbe definire al massimo 5 variabili, contenere al massimo 10 azioni,
 ciascuna delle quali formate al massimo da 20 righe di codice. Anche se possono
-esserci eccezioni occasional ialla regola, essa aiuta ad orientarsi su quando
+esserci eccezioni occasional alla regola, essa aiuta ad orientarsi su quando
 iniziare a rifattorizzare il codice del controller per spostarlo in un servizio.
 
 **Best Practice**
@@ -20,7 +20,7 @@ e sicurezza, quando possibile.
 L'accoppiamento dei controller al framework sottostante consente di sfruttare tutte
 le funzionalità del framework stesso aumentando la vostra produttività.
 
-E poichè i vostri controller dovrebbero essere **thin** e contenere
+E poichè i vostri controller dovrebbero essere **sottili** e contenere
 niente di più che poche linee di *glue-code*, spendere ore provando a disaccoppiarlo
 dal framework non porterà grandi benefici nel lungo periodo.
 La quantità di tempo *sprecato* non vale il beneficio.
