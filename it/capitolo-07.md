@@ -2,9 +2,9 @@
 ## I Form
 
 I form sono uno dei componenti Symfony più abusati; questo è dovuto sia al suo vasto campo
-di applicazione sia alla lista infinita di funzionalità. In questo capitolo
-ti mostreremo alcune best practices in modo da poter sfruttare la loro potenza
-in modo veloce.
+di applicazione sia alla sua lista infinita di funzionalità. In questo capitolo
+ti mostreremo alcune best practices in modo da poter sfruttare velocemente la loro potenza.
+
 
 #### Creazione dei form
 
@@ -14,8 +14,8 @@ Definisci i tuoi form come classi PHP.
 Il componente `Form` ti consente di creare form direttamente dal controller.
 A meno che tu non intenda riusare il form da qualche altra parte, quest'abitudine
 non è del tutto sbagliata.
-Nonostante ciò, per una migliore organizzazione e riuso si raccomanda di
-definire ogni form nella propria classe PHP.
+Nonostante ciò, per form più complessi da poter riutilizzare in altri controller
+si raccomanda di definire ogni form nella propria classe PHP.
 
 ```
 namespace AppBundle\Form;
@@ -51,7 +51,7 @@ class PostType extends AbstractType
     }
 ```
 
-Per usarla, chiamare il metodo `createForm` e instanziare la nuova classe di tipo Form:
+Per creare il form, chiamare il metodo `createForm` e instanziare la nuova classe:
 
 ```
 use AppBundle\Form\PostType;
@@ -103,7 +103,7 @@ class PostType extends AbstractType
 }
 ```
 
-Originariamente il form è stato progettato per la creazione di post, ma se si volesse riusarlo
+In questo esempio il form è stato progettato per la creazione di post, ma se si volesse riusarlo
 anche per la modifica la label del button sarebbe sbagliata.
 Alcuni sviluppatori configurano invece i button del form nel controller:
 
@@ -133,10 +133,10 @@ class PostController extends Controller
 }
 ```
 
-Anche questa soluzione è un errore perchè si sta mischiando codice markup relativo
+Anche questa soluzione è sbagliata perchè si sta mischiando codice markup relativo
 alla presentazione (etichette, classi CSS, etc) con puro codice PHP.
 La separazione delle competenze è una buona regola da seguire sempre.
-Per questo tutto ciò che è relativo alla vista deve essere messo nel *view* layer:
+Proprio per questo tutto ciò che è relativo alla vista deve essere messo nel *view* layer:
 
 ```
 <form method="POST" {{ form_enctype(form) }}>
@@ -150,10 +150,10 @@ Per questo tutto ciò che è relativo alla vista deve essere messo nel *view* la
 
 ####Renderizzare il Form
 Symfony mette a disposizione diversi modi per renderizzare il form;
-essi spaziano dal renderizzare tutto il form in un'unica linea al
+essi spaziano dal renderizzare tutto il form con un unico comando al
 renderizzare ogni singolo campo in modo indipendente.
 
-Il miglior modo dipende da quanta personalizzazione hai bisogno nel form.
+Il modo migliore dipende dalla quantità di personalizzazione necessaria nel form.
 
 Il modo più semplice, utile specialmente durante lo sviluppo, è creare i tag
 `<form></form>` manualmente e utilizzare la funzione `form_widget()`
@@ -216,14 +216,14 @@ il form che per la gestione del submit.
 
 In realtà potresti avere una `newAction` che renderizza il form e una `createAction` che
 processa solo il submit.
-Dato che entrambe le azioni però saranno quasi identiche, è più semplice lasciare che sia `newAction` a gestire il tutto.
+Dato che entrambe le azioni però sono quasi identiche è più semplice lasciare che sia `newAction` a gestire il tutto.
 
 In secondo luogo si raccomand di usare `$form->isSubmitted()`
 nello statement `if` per rendere il codice più chiaro.
 
 Tecnicamente non è necessario dato che `isValid()`  esegue prima `isSubmitted()`; senza
-questo, tuttavia, il flusso risulta un pò strano
- e il form sembra sia *sempre* processato (anche sulle richieste GET).
+questo, tuttavia, il flusso risulta un po strano
+ e il form sembra sia *sempre* processato (anche per le richieste GET).
 
 
 
