@@ -1,8 +1,8 @@
 #Capitolo 3
 ## La Configurazione
 
-La configurazione di un'applicazione solitamente coinvolge diverse parti (ad es. infrastruttura tecnologia, sicurezza)
-e diversi ambienti (sviluppo, produzione). Proprio per questo Symfony raccomanda di suddividere la configurazione in tre parti.
+La configurazione di un'applicazione solitamente coinvolge diverse parti (ad es. infrastruttura tecnologica, sicurezza,e tc.)
+e diversi ambienti (sviluppo, produzione, etc.). Proprio per questo Symfony raccomanda di suddividere la configurazione in tre parti.
 
 #### Configurazione relativa all'infrastruttura
 
@@ -50,7 +50,7 @@ Ogni qualvolta viene definito un nuovo parametro di configurazione per l'applica
 essere aggiunto a questo file e tale modifica dovrebbe essere registrata anche sul vostro
 sistema di controllo di versione.
 Quando lo sviluppatore aggiornerà il progetto o effettuerà il deploy, Symfony controllerà
-eventuali differenze tra il canonico file **parameters.dist.yml** e il file locale **parameters.yml**.
+eventuali differenze tra il file *canonico* **parameters.dist.yml** e il file locale **parameters.yml**.
 In presenza di differenze Symfony chiederà di fornire un valore per il nuovo parametro e lo aggiungerà al file
 locale **parameters.yml**.
 
@@ -113,9 +113,7 @@ Le costanti possono essere usate, per esempio, nei template di Twig grazie alla 
 </p>
 ```
 
-In questo modo sia le entità Doctrine che i repository, che normalmente sono le classi che necessitano
-conoscere questi valori, possono farlo facilmente mentre le stesse classi non possono accedere
-ai parametri del container.
+Così facendo sia le entità di Doctrine che i repository possono accedere facilmente a questi valori mentre le stesse classi non posso accedere ai parametri del container.
 
 ```
 namespace AppBundle\Repository;
@@ -132,22 +130,22 @@ class PostRepository extends EntityRepository
 }
 ```
 
-L'unico svantaggio importante nell'utilizzo delle costanti come opzioni di configurazione è che non
+L'unico svantaggio da considerare nell'utilizzo delle costanti come opzioni di configurazione è che non
 possono essere ridefinite facilmente nei test.
 
 
 #### Non usare la configurazione semantica
 
 **Best Practice**
-Non definire nei tuoi bundle una configurazione semantica per il contenitore iniettore delle dipendenze (dependency injection).
+Non definire nei tuoi bundle una configurazione semantica per il contenitore che inietta le dipendenze (dependency injection).
 
 Come spiegato in [*Come esporre una configurazione semantica per un Bundle*](http://symfony.com/doc/current/cookbook/bundles/extension.html)
-i bundle di Symfony hanno due scelte per gestire le opzioni di configurazione: la configurazione normale del servizio attraverso il file
-**services.yml** e la configurazione semantica attraverso una classe speciale di tipo ***Extension**.
+è possibile gestire le opzioni di configurazione in un bundle in due modi: la configurazione normale del servizio, attraverso il file
+**services.yml** e la configurazione semantica, attraverso una classe speciale di tipo ***Extension**.
 
 Sebbene la configurazione semantica è molto più potente e fornisce interessanti caratteristiche come la validazione
 delle opzioni di configurazione, la quantità di lavoro necessaria per la definizione del bundle è notevole
-e non vale la pena cimentarsi per bundle che non rivolti a terzi.
+e non vale la pena cimentarsi per bundle non rivolti a terzi.
 
 
 #### Definire le opzioni di configurazione sensibili al di fuori di Symfony
