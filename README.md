@@ -8,7 +8,7 @@ Authors:
 
 
 ###Italian Translation
-a cura di Giovanni Pirrotta
+a cura di Giovanni Pirrotta - [@gpirrotta](https://twitter.com/gpirrotta)
 
 ## Uno sguardo al contenuto
 
