@@ -4,7 +4,7 @@
 ####Autenticazione e Firewall
 #####(Recuperare le credenziali dell'utente)
 
-E' possibile configurare Symfony per l'autenticazione degli utenti con qualsiasi metodo
+Per l'autenticazione degli utenti è possibile configurare Symfony con qualsiasi metodo
 così come è possibile caricare le informazioni degli utenti da qualsiasi fonte. E' un argomento
 abbastanza complesso e si rimanda al [CookBook, sezione sicurezza](http://symfony.com/doc/current/cookbook/security/index.html),
 che contiene molte informazioni in merito.
@@ -22,7 +22,7 @@ La maggior parte delle applicazioni utilizza solamente un meccanismo di autentic
  Ovviamente esistono delle eccezioni ad esempio quando nel tuo sito devi proteggere delle API dalla sezione web.
  L'importante è mantenere le cose semplici.
 
-Si dovrebbe inoltre sempre abilitare l'opzione `anonymous` nel tuo firewall. Se hai bisogno che gli utenti
+Si dovrebbe inoltre abilitare sempre l'opzione `anonymous` nel tuo firewall. Se hai bisogno che gli utenti
 accedano a sezioni differenti del tuo sito utilizza la configurazione dell'opzione `access_control`.
 
 **Best Practice**
@@ -31,7 +31,7 @@ Usare **bcrypt** per codificare le password degli utenti.
 Se memorizzi le password degli utenti nel tuo sistema si raccomanda di usare l'encoder **bcrypt**,
 invece della tradizionale codifica SHA-512. I vantaggi più importanti
 di **bcrypt** sono l'inclusione di un valore *salt* per la protezione contro gli attacchi di tipo *rainbow table*
-e la sua natura adattiva, che consente di rallentare la sua esecuzione e resistere meglio agli attacchi di forza bruta.
+e la sua natura adattiva che consente di rallentare la sua esecuzione e resistere meglio agli attacchi di forza bruta.
 
 
 Detto questo ecco un esempio di autenticazione della nostra applicazione che usa un form login per caricare
@@ -74,7 +74,7 @@ l'*annotation @Security* e usare il metodo *isGranted* del servizio `security.co
 
 **Best Practice**
 * Per la protezione di pattern URL molto grandi usa `access_control`
-* Quando possibile usa l'annotazione *@Security* - (dalla versione originale)
+* Quando possibile usa l'annotazione *@Security* - (dalla versione inglese)
 * Per proteggere singole risorse usa l'annotazione *@Security* -  (dalla traduzione spagnola)
 * Per logiche di sicurezza più complesse usa direttamente il servizio *security.context*
 
@@ -138,7 +138,7 @@ Questa configurazione richiede l'uso del [*ParamConverter*](http://symfony.com/d
 che automaticamente caricherà l'oggetto `Post` mettendolo nell'argomento `$post`.
 Grazie a questa funzionalità è possibile usare la variabile `post` nell'espressione.
 
-Lo svantaggio delle espressioni nelle annotazioni p non possono essere
+Lo svantaggio delle espressioni nelle annotazioni è che non possono essere
 riusate facilmente in altre parti dell'applicazione. Si immagini di voler aggiungere un link in
 un template visibile solo dagli autori.
 Per ottenere questo comportamento si dovrà ripetere il codice dell'espressione usando la sintassi Twig:
@@ -321,7 +321,7 @@ Il bundle [*FOSUserBundle*](https://github.com/FriendsOfSymfony/FOSUserBundle), 
 di Symfony, aggiunge il supporto alla gestione utenti memorizzati in una base di dati. Il bundle implementa
 la gestione di task comuni come la registrazione utente e la funzionalità di recupero password.
 Per consentire agli utenti di loggarsi solo una volta senza dover reinserire
- la password ogni volta che si visita il tuo sito , abilita la
+ la password ogni volta che visitano il tuo sito , abilita la
 funzionalità [*Remember Me*](http://symfony.com/doc/current/cookbook/security/remember_me.html)
 
 Nel fornire assistenza ai clienti a volte è necessario accedere all'applicazione come *altri* utenti in modo
