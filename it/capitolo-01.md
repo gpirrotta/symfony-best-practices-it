@@ -1,20 +1,20 @@
 #Capitolo 1
 ## Best Practices del framework Symfony
 
-Symfony è conosciuto per essere un framework molto flessibile; esso è infatti utilizzato in ambiti diversi come piccoli siti web, applicazioni aziendali che servono miliardi di richieste ma anche come base per altri framework. 
+Symfony è conosciuto per essere un framework molto flessibile; esso è infatti utilizzato in ambiti diversi come ad esempio piccoli siti web, applicazioni enterprise con miliardi di richieste ma anche come base per altri framework.
 
 Da quando è stato pubblicato nel luglio 2011, la comunità Symfony ha percorso un lungo cammino di apprendimento, sia su ciò che Symfony è in grado di fare, sia su qual è il modo migliore per farlo.
 
 
-Le diverse risorse create dalla comunità, da articoli di blog a presentazioni a congressi, hanno creato una serie di raccomandazioni e pratiche ufficiose per lo sviluppo di applicazioni Symfony
+Le diverse risorse create dalla comunità, da articoli di blog a presentazioni a conferenze, hanno creato una serie di raccomandazioni e pratiche ufficiose per lo sviluppo di applicazioni Symfony
 
-Purtroppo molte di queste raccomandazioni sono sbagliate e oltre a complicare lo sviluppo delle applicazioni non sono allineate con la filosofia originale e pragmatica dei creatori di Symfony. 
+Purtroppo molte di queste raccomandazioni sono sbagliate e oltre a complicare lo sviluppo delle stesse applicazioni non sono allineate con la filosofia originale e pragmatica dei creatori di Symfony.
 
 ### In cosa consiste questa guida?
 
-Lo scopo di questa guida è quello di risolvere il problema sopra menzionato stabilendo una serie di buone pratiche ufficiali per lo sviluppo di applicazioni web con il framework Symfony. Queste pratiche sono quelle che meglio si adattano alla filosofia immaginata dal creatore originale del framework *Fabien Potencier*.  
+Lo scopo di questa guida è quello di risolvere il problema sopra menzionato stabilendo una serie di buone pratiche ufficiali per lo sviluppo di applicazioni web con il framework Symfony. Queste pratiche sono quelle che meglio si adattano alla filosofia immaginata dal creatore originale del framework *Fabien Potencier*.
 
-Sappiamo che le vecchie abitudini sono dure a morire e qualcuno tra voi potrebbe meravigliarsi o non essere d'accordo con alcune di queste regole. Nonostante ciò, crediamo che seguendo questi consigli potrete sviluppare le applicazioni più velocemente, con una minore complessità e con la stessa o perfino una migliore qualità. Inoltre le raccomandazioni saranno continuamente aggiornate e migliorate.
+Sappiamo che le vecchie abitudini sono dure a morire e qualcuno potrebbe meravigliarsi o non essere d'accordo con alcune di queste regole. Nonostante ciò, crediamo che seguendo questi consigli potrete sviluppare le applicazioni più velocemente, con una minore complessità e con la stessa o perfino una migliore qualità. Inoltre le raccomandazioni saranno continuamente aggiornate e migliorate.
 
 
 In ogni caso, considerate che le raccomandazioni sono opzionali e che voi e il vostro team potete come non potete seguirle. Se preferite continuare a sviluppare utilizzando le vostre practiche e metodologie, continuate a farlo. Symfony è abbastanza flessibile da adattarsi alle vostre necessità e questo non cambierà mai.
