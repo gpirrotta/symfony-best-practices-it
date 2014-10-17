@@ -6,8 +6,8 @@ business rules that determine how data can be created, displayed, stored, and ch
 (leggi la [definizione completa da Wikipedia](http://en.wikipedia.org/wiki/Business_logic))
 
 Nelle applicazioni Symfony la logica di business comprende tutto il codice implementato per l'applicazione
-non relativo al framework (ad es. routing e controller). Le classi di dominio, le entità Doctrine e
-regolari classi PHP utilizzate come servizi rappresentano buoni esempi di logica di business.
+non relativo al framework (ad es. rotte e controller). Le classi di dominio, le entità Doctrine e
+e classiche classi PHP utilizzate come servizi rappresentano buoni esempi di logica di business.
 
 Nella maggior parte dei progetti la logica di business dovrebbe essere inserita dentro **AppBundle**.
 All'interno del bundle è possibile creare qualsiasi gerarchia di directory come struttura organizzativa.
@@ -86,8 +86,7 @@ Pertanto il servizio dovrebbe chiamarsi **app.utils.slugger**.
 Tuttavia se si usano nomi dei servizi brevi il codice risulterà più facile da leggere e da usare.
 
 **Best Practice**
-Il nome dei servizi dovrebbe essere il più breve possibile,
-idealmente solo una breve parola.
+Il nome dei servizi dovrebbe essere il più breve possibile, idealmente solo una piccola parola.
 
 Adesso è possibile usare lo slugger da ogni controller, come ad es. **AdminController**:
 
@@ -107,19 +106,19 @@ public function createAction(Request $request)
 
 #### Il formato del file di configurazione YAML
 
-Nella sezione precedente per la definizione del servizio è stato usato il formato YAML.
+Per la definizione del servizio, nella sezione precedente, è stato usato il formato YAML.
 
 **Best Practice**
 Per la definizione dei propri servizi usare il formato YAML.
 
 Sappiamo che questa raccomandazione è molto controversa.
-Dalla nostra esperienza sia il formato YAML che il formato XML risulta
+Dalla nostra esperienza sappiamo che sia il formato YAML che il formato XML è
 ugualmente utilizzato tra gli sviluppatori, con una leggere preferenza verso YAML.
 Entrambi i formati hanno le stesse performance, quindi la scelta di quale utilizzare
 è una questione di gusti personali.
 
-Noi raccomandiamo di usare YAML perchè risulta più semplice da gestire ai nuovi
-programmatori sia più concisa. Ovviamente puoi usare il formato che preferisci.
+Noi raccomandiamo di usare YAML perchè risulta più semplice da gestire dai nuovi
+programmatori sia più conciso. Ovviamente puoi usare il formato che preferisci.
 
 #### Non definire parametri per le classi dei servizi
 
@@ -180,7 +179,7 @@ Se sei uno sviluppatore esperto, puoi creare le tue classi nel tuo namespace in 
 ##### Il Mapping di Doctrine
 Le entità doctrine sono semplici classi PHP le cui informazioni vengono memorizzate in qualche "database".
 Le uniche informazioni conosciute da Doctrine su queste entità sono informazioni di
-mapping dei metadati del vostro modello.
+mapping di metadati sul vostro modello.
 Doctrine supporta quattro formati per definire queste informazioni: YAML, XML, PHP e annotazioni.
 
 **Best Practice**
