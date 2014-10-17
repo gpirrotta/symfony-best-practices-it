@@ -4,10 +4,11 @@
 ####Autenticazione e Firewall
 #####(Recuperare le credenziali dell'utente)
 
-Per l'autenticazione degli utenti è possibile configurare Symfony con qualsiasi metodo
-così come è possibile caricare le informazioni degli utenti da qualsiasi fonte. E' un argomento
-abbastanza complesso e si rimanda al [CookBook, sezione sicurezza](http://symfony.com/doc/current/cookbook/security/index.html),
-che contiene molte informazioni in merito.
+Per autenticare gli utenti è possibile configurare Symfony in molti modi; inoltre
+è possibile caricare le informazioni degli utenti da qualsiasi fonte. 
+Questo è un argomento abbastanza complesso, per maggiori informazioni si 
+rimanda al [CookBook, sezione sicurezza](http://symfony.com/doc/current/cookbook/security/index.html).
+
 
 A prescindere dalle tue necessità l'autenticazione è configurata in `security.yml`,  sotto
 la chiave `firewalls`.
@@ -79,12 +80,12 @@ l'*annotation @Security* e usare il metodo *isGranted* del servizio `security.co
 * Per logiche di sicurezza più complesse usa direttamente il servizio *security.context*
 
 Esistono anche diversi modi per centralizzare la logica di autorizzazione, come i
-votanti e le ACL o lista di controllo degli accessi.
+votanti e le ACL (o lista di controllo degli accessi).
 
 **Best Practice**
 * Personalizzare un votante per definire restrizioni a grana fine
-* Usare le ACL per definire logiche di sicurezza complesse, per gestire l'accesso di ogni oggetto da ogni
-utente attraverso un'interfaccia admin.
+* Usare le ACL per definire logiche di sicurezza complesse (per gestire l'accesso di ogni oggetto da ogni
+utente attraverso un'interfaccia admin).
 
 
 #### L'annotazione @Security
@@ -92,7 +93,7 @@ utente attraverso un'interfaccia admin.
 Per controllare l'accesso su un controller usa l'annotazione `@Security`;
 oltre ad essere di facile lettura essa è collocata sempre sopra ogni action.
 
-Nella nostra applicazione di prova per creare un nuovo post è necessario disporre del ruolo `ROLE_ADMIN`.
+Nella nostra applicazione di prova, per creare un nuovo post, è necessario disporre del ruolo `ROLE_ADMIN`.
 Usando l'annotazione `@Security` il codice del controller sarà:
 
 
