@@ -28,7 +28,7 @@ Il componente `Translation` supporta diversi formati di file di traduzione: PHP,
 Usa il formato XLIFF per i tuoi file di traduzione.
 
 Fra tutti i formati di traduzione disponibili solo XLIFF e gettext sono ampiamente
-supportati nei tool usati dai traduttori professionali. Poichè XLIFF è basato su XML
+supportati nei tool usati dai traduttori professionali. Poichè XLIFF è basato su XML,
 è possibile validare il contenuto del file appena viene creato.
 
 Symfony 2.6 ha aggiunto il supporto per le note e commenti all'interno dei file XLIFF,
