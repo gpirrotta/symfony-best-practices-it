@@ -74,7 +74,7 @@ Se stai sviluppando un'applicazione come questa dovresti usare i tool raccomanda
 come Bower e GruntJS. Inoltre dovresti sviluppare la tua applicazione frontend in modo del tutto separato dal
 backend Symfony (e anche separato dai repository).
 
-###Saperne di più su Assettic
+###Per saperne di più su Assettic
 
 Assettic è in grado di migliorare la velocità dei siti mininizzarndo asset CSS e Javascript
 tramite [*UglifyCSS/UglifyJS*](http://symfony.com/doc/current/cookbook/assetic/uglifyjs.html).
