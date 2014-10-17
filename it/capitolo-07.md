@@ -6,10 +6,11 @@ di applicazione sia alla sua lista infinita di funzionalità. In questo capitolo
 ti mostreremo alcune best practices in modo da poterli sfruttare al meglio.
 
 
-#### Creazione dei form
+### Creazione dei form
 
-**Best Practices**
-Definisci i tuoi form come classi PHP.
+##### Best Practices
+
+**Definisci i tuoi form come classi PHP.**
 
 Il componente `Form` ti consente di creare form direttamente dal controller.
 A meno che tu non intenda riusare il form da qualche altra parte, quest'abitudine
@@ -66,7 +67,7 @@ public function newAction(Request $request)
 }
 ```
 
-#####Registrazione dei Form come Servizi
+####Registrazione dei Form come Servizi
 E' possibile [registrare i tipi di form come servizi](http://symfony.com/doc/current/cookbook/form/create_custom_field_type.html#creating-your-field-type-as-a-service), anche se non si consiglia di farlo a meno che non si pianifichi di riusare lo stesso form in altri posti
 o di incorporarlo all'interno di altri form usando il
 [tipo collection](http://symfony.com/doc/current/reference/forms/types/collection.html).
@@ -75,13 +76,14 @@ Per la maggior parte dei casi in cui il form viene usato solo per editare o crea
 servizio è eccessiva e rende più difficile capire esattamente quale classe viene usata nel controller.
 
 
-####Configurazione dei Button
+###Configurazione dei Button
 
 Le classe dei form dovrebbe essere agnostica rispetto a dove viene utilizzata. In questo modo
 i form possono essere riusati più facilmente.
 
-**Best Practice**
-Aggiungi i button direttamente nel template, non nelle classi dei form o nei controller.
+##### Best Practice
+
+**Aggiungi i button direttamente nel template, non nelle classi dei form o nei controller.**
 
 A partire da Symfony 2.5 è possibile aggiugere campi button all'interno del form.
 Il vantaggio è che si semplifica il codice del template che visualizza il form.
@@ -147,7 +149,7 @@ Proprio per questo tutto ciò che è relativo alla vista deve essere messo nel *
 ```
 
 
-####Renderizzare il Form
+###Renderizzare il Form
 Symfony mette a disposizione diversi modi per renderizzare il form;
 essi spaziano dal renderizzare tutto il form con un unico comando al
 renderizzare ogni singolo campo in modo indipendente.
@@ -164,9 +166,10 @@ per renderizzare tutti i campi:
 </form>
 ```
 
-**Best Practice**
-Non usare le funzioni `form()` o `form_start()` per renderizzare l'apertura e
-la chiusura dei tag del form.
+#####Best Practice
+
+**Non usare le funzioni `form()` o `form_start()` per renderizzare l'apertura e
+la chiusura dei tag del form.**
 
 Gli sviluppatori più esperti si saranno accorti che nell'esempio precedente
 abbiamo creato manualmente i tag `<form>` invece di usare le funzioni `form_start()` o `form()`.
@@ -184,7 +187,7 @@ Per maggiori informazioni su come renderizzare i form e su come impostare un tem
 consultare il seguente articolo
 [*Come personalizzare il rendering dei form*](http://symfony.com/doc/current/cookbook/form/form_customization.html).
 
-####Gestione del submit
+###Gestione del submit
 La gestione di un form in Symonfy generalmente segue la seguente struttura:
 
 ```
