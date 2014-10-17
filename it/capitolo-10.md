@@ -5,8 +5,9 @@ I Web assets sono i fogli di stile CSS, i file JavaScript e le immagini che si u
 frontend per renderlo accattivante. Gli sviluppatori Symfony, solitamente, mettono gli asset nella
 directory `Resources/public/` di ogni bundle.
 
-**Best Practice**
-Inserisci gli asset nella directory `web/` dell'applicazione.
+#####Best Practice
+
+**Inserisci gli asset nella directory `web/` dell'applicazione.**
 
 Sparpagliare i web assets tra decine di bundle rende il tutto più difficile da gestire.
 La vita dei vostri designer sarebbe molto più facile se tutti gli asset dell'applicazione
@@ -28,7 +29,7 @@ Ricordati che la directory `web/` è pubblica e che qualsiasi cosa memorizzata q
 sarà pubblicamente accessibile. Per questo motivo dovresti mettere qui tutti i compilati dei web asset
 ma non i loro file sorgente (ad es. i file SASS).
 
-####Usare Assetic
+###Usare Assetic
 
 Oggigiorno è praticamente impossibile trovare siti web che utilizzano solamente pochi file statici CSS e Javascript.
 E' molto probabile che il tuo progetto utilizzi invece molti file Javascript e diversi file Sass o LESS per la generazione dei CSS.
@@ -36,9 +37,10 @@ Per migliorare le perfomance lato client tutti questi file andrebbero quindi rag
 
 Esistono molti tool per risolvere questi problemi come ad esempio GruntJS, un tool progettato per il frontend (ma che non usa PHP).
 
-**Best Practice**
-Usare Assetic per compilare, raggruppare e minimizzare i web asset, a meno che tu non abbia dimistichezza
-con tool come GruntJS.
+#####Best Practice
+
+**Usare Assetic per compilare, raggruppare e minimizzare i web asset, a meno che tu non abbia dimistichezza
+con tool come GruntJS.**
 
 [*Assetic*](http://symfony.com/doc/current/cookbook/assetic/asset_management.html) è un asset
 manager in grado di compilare asset sviluppati con diverse tecnologie di frontend come LESS, Sass e
@@ -63,7 +65,7 @@ unico tag Twig:
 {% endjavascripts %}
 ```
 
-####Applicazioni Frontend-Based
+###Applicazioni Frontend-Based
 
 Recentemente tecnologie di frontend come AngularJS sono diventate molto popolari nello sviluppo
 di applicazioni Web. Tali applicazioni comunicano con il sistema tramite API.
@@ -72,7 +74,7 @@ Se stai sviluppando un'applicazione come questa dovresti usare i tool raccomanda
 come Bower e GruntJS. Inoltre dovresti sviluppare la tua applicazione frontend in modo del tutto separato dal
 backend Symfony (e anche separato dai repository).
 
-####Saperne di più su Assettic
+###Saperne di più su Assettic
 
 Assettic è in grado di migliorare la velocità dei siti mininizzarndo asset CSS e Javascript
 tramite [*UglifyCSS/UglifyJS*](http://symfony.com/doc/current/cookbook/assetic/uglifyjs.html).
