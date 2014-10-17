@@ -1,7 +1,7 @@
 #Capitolo 3
 ## La Configurazione
 
-La configurazione di un'applicazione solitamente coinvolge diverse parti (ad es. infrastruttura tecnologica, sicurezza,e tc.)
+La configurazione di un'applicazione, normalmente, coinvolge diverse parti (ad es. infrastruttura tecnologica, sicurezza, etc.)
 e diversi ambienti (sviluppo, produzione, etc.). Proprio per questo Symfony raccomanda di suddividere la configurazione in tre parti.
 
 #### Configurazione relativa all'infrastruttura
@@ -49,7 +49,7 @@ definiti affinchè l'applicazione funzioni correttamente.
 Ogni qualvolta viene definito un nuovo parametro di configurazione per l'applicazione, esso dovrebbe
 essere aggiunto a questo file e tale modifica dovrebbe essere registrata anche sul vostro
 sistema di controllo di versione.
-Quando lo sviluppatore aggiornerà il progetto o effettuerà il deploy, Symfony controllerà
+Quando lo sviluppatore aggiorna il progetto o effettua il deploy, Symfony controllerà
 eventuali differenze tra il file *canonico* **parameters.dist.yml** e il file locale **parameters.yml**.
 In presenza di differenze Symfony chiederà di fornire un valore per il nuovo parametro e lo aggiungerà al file
 locale **parameters.yml**.
@@ -130,25 +130,25 @@ class PostRepository extends EntityRepository
 }
 ```
 
-L'unico svantaggio da considerare nell'utilizzo delle costanti come opzioni di configurazione è che non
+L'unico svantaggio da considerare, nell'utilizzo delle costanti come opzioni di configurazione, è che non
 possono essere ridefinite facilmente nei test.
 
 
 #### Non usare la configurazione semantica
 
 **Best Practice**
-Non definire nei tuoi bundle una configurazione semantica per il contenitore che inietta le dipendenze (dependency injection).
+Non definire nei tuoi bundle una configurazione semantica per il container (dependency injection).
 
 Come spiegato in [*Come esporre una configurazione semantica per un Bundle*](http://symfony.com/doc/current/cookbook/bundles/extension.html)
 è possibile gestire le opzioni di configurazione in un bundle in due modi: la configurazione normale del servizio, attraverso il file
-**services.yml** e la configurazione semantica, attraverso una classe speciale di tipo ***Extension**.
+**services.yml** e la configurazione semantica, attraverso una classe speciale di tipo **Extension**.
 
-Sebbene la configurazione semantica è molto più potente e fornisce interessanti caratteristiche come la validazione
+Sebbene la configurazione semantica è molto più potente e fornisce interessanti caratteristiche, come la validazione
 delle opzioni di configurazione, la quantità di lavoro necessaria per la definizione del bundle è notevole
 e non vale la pena cimentarsi per bundle non rivolti a terzi.
 
 
 #### Definire le opzioni di configurazione sensibili al di fuori di Symfony
 Quando si lavora con opzioni sensibili, come le credenziali di accesso del database, si raccomanda di spostarle
-al di fuori dell'applicazione Symfony e di renderle disponibili tramite le variabili d'ambiente. Impara come farlo
+al di fuori dell'applicazione Symfony e di renderle disponibili tramite variabili d'ambiente. Impara come farlo
 nel seguete articolo: [Come settare parameteri esterni nel Service Container](http://symfony.com/doc/current/cookbook/configuration/external_parameters.html).
