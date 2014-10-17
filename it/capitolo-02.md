@@ -1,11 +1,11 @@
 #Capitolo 2
 ## La Creazione del Progetto
 
-####Installazione di Symfony
+###Installazione di Symfony
 
 Fra i tutti modi di installare Symfony ne raccomandiamo solo uno.
 
-**BEST PRACTICE**  
+##### BEST PRACTICE
 **Utilizzare sempre [*Composer*](https://getcomposer.org) per installare Symfony**
 
 Composer è un dependency manager per applicazioni moderne in PHP. Grazie a questo tool, aggiungere o togliere requisiti al
@@ -22,7 +22,7 @@ Composer version 1e27ff5e22df81e3cd0cd36e5fdd4a3c5a031f4a 2014-08-11 15:46:48
 Probabilmente vedrete un identificatore di versione diverso. Questo perchè Composer viene aggiornato
 continuamente e non importa la sua versione.
 
-##### Installazione di Composer globalmente
+#### Installazione di Composer globalmente
 Nel caso tu non abbia installato Composer globalmente, digita i seguenti due comandi se usi
 Linux o Mac OSX (il secondo comando vi chiederà la password utente)
 
@@ -35,7 +35,7 @@ A seconda della distribuzione Linux potrebbe essere necessario digitare il coman
 
 Se usi un sistema Windows, scarica l'installer dalla [pagina di download di Composer](https://getcomposer.org/download/) e segui i passi per l'installazione.
 
-#### Creazione dell'Applicazione Blog
+### Creazione dell'Applicazione Blog
 Adesso che tutto è correttamente configurato, possiamo creare un nuovo progetto basato su Symfony.
 Spostati nella tua console in una directory in cui hai i permessi per creare file ed esegui i seguenti comandi:
 
@@ -46,7 +46,7 @@ $ composer create-project symfony/framework-standard-edition blog/
 
 Il comando creerà una nuova directory chiamata **blog** contenente l'ultima release stabile di Symfony disponibile.
 
-##### Il controllo dell'installazione
+#### Il controllo dell'installazione
 Ultimata l'installazione spostarsi nella directory **blog** e controllare la correttezza dell'installazione di Symfony eseguendo i seguenti comandi:
 
 ```
@@ -96,7 +96,7 @@ Per motivi di sicurezza le release di Symfony sono firmate digitalmente. Per ver
 date uno sguardo al [repository pubblico dei checksum](https://github.com/sensiolabs/checksums) e seguite
 [questi passi](http://fabien.potencier.org/article/73/signing-project-releases) per verificare le firme.
 
-#### Strutturare l'Applicazione
+### Strutturare l'Applicazione
 Dopo aver creato l'applicazione, spostandosi nella directory **blog/**, si vedrà il seguente insieme di file e directory, generato automaticamente:
 
 ```
@@ -126,7 +126,7 @@ e tutta la logica di business;
 * **web/** contiene il front controller e tutti i Web asset, come i fogli di stile, i file Javascript e le immagini.
 
 
-##### I Bundle dell'Applicazione
+#### I Bundle dell'Applicazione
 Quando è stato rilasciato Symfony 2.0 la maggior parte di sviluppatori ha adottato, in modo naturale, lo stesso approccio usato
 in symfony 1.x suddividendo l'applicazione in moduli logici. Proprio per questo, molte applicazioni Symfony
 definiscono bundle come:  **UserBundle**, **ProductBundle**, **InvoiceBundle**, etc.
@@ -136,7 +136,7 @@ Se **UserBundle** non può essere riusato "così com'è" in un'altra applicazion
 è più un bundle. Inoltre **InvoiceBundle** dipende da **ProductBundle**, quindi non esiste alcun vantaggio
  ad avere due bundle separati.
 
-**BEST PRACTICE**
+##### BEST PRACTICE
 **Crea solamente un bundle, chiamato AppBundle, nella tua applicazione**
 
 Implementando solamente il bundle **AppBundle** nel tuo progetto renderai il tuo codice più conciso e facile
@@ -171,7 +171,7 @@ Se stai usando una versione Symfony più vecchia, puoi generarlo con questo coma
 $ php app/console generate:bundle --namespace=AppBundle --dir=src --format=annotation --no-interaction
 ```
 
-#### Estendere la Struttura delle Directory
+### Estendere la Struttura delle Directory
 Se il tuo progetto o la tua infrastruttura richiede alcune modifiche alla struttura delle directory di default,
 è possibile effettuare l'[overriding della posizione delle principali directory](http://symfony.com/doc/current/cookbook/configuration/override_dir_structure.html): ad es.
 **cache/**, **logs/** and **web/**.
