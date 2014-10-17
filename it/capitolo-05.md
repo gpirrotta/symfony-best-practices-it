@@ -11,10 +11,11 @@ ciascuna delle quali formate al massimo da 20 righe di codice. Anche se possono
 esserci eccezioni alla regola, essa mette in evidenza quando sarebbe opportuno
 iniziare a rifattorizzare il codice del controller e spostarlo in un servizio.
 
-**Best Practice**
-Estendi il tuo controller dalla classe base `Controller` fornita dal bundle
-**FrameworkBundle** e usa le annotazioni per configurare rotte, cache
-e sicurezza, quando possibile.
+##### Best Practice
+
+**Estendi il tuo controller dalla classe base `Controller` fornita dal bundle
+FrameworkBundle e usa le annotazioni per configurare rotte, cache
+e sicurezza, quando possibile.**
 
 
 L'accoppiamento dei controller al framework sottostante consente di sfruttare tutte
@@ -35,7 +36,8 @@ dal framework e nello stesso tempo accoppiare totalmente al framework controller
 in modo da ottenere il massimo da Symfony.
 
 
-####Configurazione delle Rotte
+###Configurazione delle Rotte
+
 Per caricare tutte le rotte definite nelle annotazioni dei controller del bundle
 `AppBundle` aggiungete la seguente configurazione al file principale delle rotte:
 
@@ -69,10 +71,12 @@ tutto in sottodirectory.
             └─ ...
 ```
 
-####Configurazione del Template
+###Configurazione del Template
 
-**Best Practice**
-Non usare l'annotazione **@Template()** per configurare il template usato dal controller
+##### Best Practice
+
+**Non usare l'annotazione @Template() per configurare il template usato dal controller**
+
 
 Anche se l'annotazione **@Template()** risulta molto utile essa nasconde qualche *trabocchetto*. Per questo motivo
 si raccomanda di non usarla.
@@ -89,7 +93,7 @@ dell'homepage impiega 5 millisecondi usando il metodo **$this->render()** mentre
 26 millisecondi usando l'annotazione **@Template**.
 
 
-####Come dovrebbe essere il Controller
+###Come dovrebbe essere il Controller
 
 Considerando tutto, ecco un esempio di come dovrebbe essere il controller
 per l'homepage della nostra applicazione:
@@ -117,16 +121,16 @@ class DefaultController extends Controller
 }
 ```
 
-####Usare il ParamConverter
+###Usare il ParamConverter
 
 Se la tua applicazione usa Doctrine è possibile usare *opzionalmente* il
 [*ParamConverter*](http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html)
 per effettuare la ricerca dell'entity in modo automatico e passarla
 come argomento del controller.
 
-**Best Practice**
-Usa il ParamConverter per caricare automaticamente le entity Doctrine
-nei casi più semplici.
+##### Best Practice
+**Usa il ParamConverter per caricare automaticamente le entity Doctrine
+nei casi più semplici.**
 
 Per esempio:
 
@@ -152,7 +156,7 @@ un oggetto la cui proprietà **$id** corrisponde al valore **{id}**. Nel
 caso in cui non venga trovato alcun **Post** verrà mostrato la pagina 404.
 
 
-##### Esecuzione di ricerche più avanzate
+#### Esecuzione di ricerche più avanzate
 
 Nell'esempio precedente tutto funziona senza nessuna configurazione
 perchè il nome della wildcard **{id}** corrisponde esattamente al nome della
@@ -200,7 +204,7 @@ Possiamo infine dire che la scorciatoia del ParamConverter è buona nelle situaz
 Nonostante ciò non si dovrebbe mai dimenticare che la ricerca diretta di entity è un'operazione 
 molto facile.
 
-#### Esecuzione di codice prima e dopo del controller
+### Eseguire codice prima e dopo del controller
 
 Se si ha la necessità di eseguire del codice prima o dopo l'esecuzione dei controller
 è possibile usare il componente *EventDispatcher*
