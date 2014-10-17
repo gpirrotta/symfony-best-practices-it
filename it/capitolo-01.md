@@ -25,7 +25,7 @@ Questa guida è pensata per qualsiasi sviluppatore Symfony, sia esperto che prin
 
 Inoltre abbiamo deciso di mantenere questa guida più piccola possibile, per essere molto facile da leggere. Non ci soffermeremo quindi su spiegazioni che si possono trovare nella documentazione ufficiale di Symfony, come discussioni sulla **dependency injection** o sul **front controller**. Ci soffermeremo unicamente a spiegare come fare meglio ciò che già conosci.
 
-## L'applicazione di esempio
+### L'applicazione di esempio
 Insieme a questa guida troverete un'applicazione di esempio sviluppata seguendo le best practices. **L'applicazione è un semplice blog** e ci consentirà di concentrarci su ciò che ci lega a Symfony senza sconfinare in particolarità proprie dell'applicazione.
 
 Invece di sviluppare l'applicazione passo passo, troverete snippet di codice all'interno dei singoli capitoli. Fare riferimento all'ultimo capitolo di questa guida per maggiori dettagli sull'applicazione e le istruzioni per installarla.
