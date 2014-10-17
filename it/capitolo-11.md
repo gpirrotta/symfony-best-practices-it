@@ -7,23 +7,24 @@ I test funzionali consentono di simulare un "browser", quindi è possibile navig
 le pagine del tuo sito, cliccare sui link, riempire i form e asserire di vedere
 certi elementi nella pagina.
 
-####Test Unitari
+###Test Unitari
 I test unitari sono usati per testare la tua "logica di business"; essa è
  totalmente indipendente dal framework motivo per cui Symfony non include al suo interno
  nessun tool per i testi unitari. Tuttavia, i tool più conosciuti sono
 [PhpUnit](https://phpunit.de/) e [PhpSpec](http://www.phpspec.net/).
 
 
-####Test Funzionali
+###Test Funzionali
 
 Creare buoni test funzionali può essere molto difficile, per questo motivo molti sviluppatori li
 ignorano del tutto e non effettuano nessun test. La raccomandazione è di non ignorarli.
 Infatti, definendo anche solo qualche semplice test funzionale potrai individuare velocemente
  grandi errori prima di effettuare il deploy:
 
-**Best Practice**
-Definire il test funzionale che almeno controlli il caricamento corretto di tutte pagine
-della tua applicazione.
+#####Best Practice
+
+**Definire il test funzionale che almeno controlli il caricamento corretto di tutte pagine
+della tua applicazione.**
 
 
 Un semplice esempio di un test funzionale:
@@ -55,13 +56,14 @@ public function provideUrls()
  Apparentemente potrebbe sembrare inutile ma, considerando quanto poco sforzo viene fatto,
  è sempre un bene avere il test nella vostra applicazione.
 
-##### Hardcodare gli URL nei test funzionali
+#### Hardcodare gli URL nei test funzionali
 
  Alcuni di voi si staranno chiedendo perchè nel precedente test funzionale non viene usato
  il servizio di generazione degli URL.
 
- **Best Practice**
-Hardcodare direttamente gli URL nei test funzionali invece di usare il generatore di URL.
+#####Best Practice
+
+**Hardcodare direttamente gli URL nei test funzionali invece di usare il generatore di URL.**
 
 
 Considera il seguente test funzionale che usa il servizio `router` per generare l'URL della
@@ -84,7 +86,7 @@ l'URL originale non funzionerà più. Proprio per questo ogni bookmark di quell'
 più raggiungibile con conseguenze anche sul page ranking nei motori di ricerca.
 
 
-#### Testare Javascript
+### Testare Javascript
 
 Il client fornito da Symfony per i test funzionali funziona molto bene ma non può essere usato per testare
 il comportamento di Javascript sulle tue pagine. Se ti serve questa funzionalità considera l'utilizzo della
@@ -94,7 +96,7 @@ Ovviamente se la tua applicazione usa Javascript in tutte le sue funzionalità
  dovresti considerare l'uso di tool specificatamente pensati per testare Javascript.
 
 
-####Saperne di più sui Test Funzionali
+###Saperne di più sui Test Funzionali
 
 Usa le librerie [Faker](https://github.com/fzaninotto/Faker) e
 [Alice](https://github.com/nelmio/alice) per la generazione dei dati delle fixture.
