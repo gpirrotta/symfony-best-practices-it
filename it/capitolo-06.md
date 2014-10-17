@@ -6,8 +6,9 @@ e dalla possibilità di mescolare facilamente HTML e codice dinamico.
 Con il passare del tempo sono nati tanti linguaggi per i template - come [Twig](http://twig.sensiolabs.org/) -
 in grado di gestire i template dell'applicazione in modo migliore.
 
-**Best Practice**
-Usa Twig per i tuoi template
+#####Best Practice
+
+**Usa Twig per i tuoi template**
 
 Generalmente parlando, i template in PHP sono più prolissi di Twig per
 la mancanza di supporto nativo a molte caratteristiche necessarie nei template moderni,
@@ -20,10 +21,11 @@ Inoltre Twig è l'unico formato con supporto garantito in Symfony 3.0.
 Il formato PHP potrebbe non essere più supportato ufficialmente.
 
 
-####Posizione dei Template
+###Posizione dei Template
 
-**Best Practice**
-Inserisci tutti i template della tua applicazione nella directory **app/Resource/views/**.
+##### Best Practice
+
+**Inserisci tutti i template della tua applicazione nella directory app/Resource/views/**.
 
 Solitamente gli sviluppatori Symfony mettono i template dell'applicazione nella directory
 **Resources/views/** di ciascun bundle. Per riferirsi ad essi usano il nome logico
@@ -45,11 +47,12 @@ Innanzitutto questo semplifica drasticamente il nome logico dei template:
 Un altro vantaggio è che centralizzare i template semplifica il lavoro dei designer.
 Essi non dovranno cercare più i template in tante directory sparpagliate fra i bundle.
 
-####Estensioni Twig
+###Estensioni Twig
 
-**Best Practice**
-Definisci le estensioni di Twig nella directory `AppBundle/Twig` configurandole
- nel file `app/config/services.yml`.
+#####Best Practice
+
+**Definisci le estensioni di Twig nella directory `AppBundle/Twig` configurandole
+ nel file `app/config/services.yml`**
 
 Alla nostra applicazione serve un filtro Twig personalizzato `m2html` in modo da poter
 trasformare il contenuto di ogni post da Markdown in HTML.
