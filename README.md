@@ -49,7 +49,7 @@ Giovanni Pirrotta - [@gpirrotta](https://twitter.com/gpirrotta)
     * Configurazione del template
     * Come dovrebbe essere il controller
     * Usare il ParamConverter
-    * Esecuzione di codice prima e dopo del controller
+    * Eseguire codice prima e dopo del controller
 
 
 6. [**I Template**](/it/capitolo-06.md)
@@ -77,20 +77,20 @@ Giovanni Pirrotta - [@gpirrotta](https://twitter.com/gpirrotta)
     * L'annotazione @Security
     * Controllare i permessi senza @Security
     * I Votanti
-    * Saperne di più
+    * Per saperne di più
 
 
 10. [**I Web Assets**](/it/capitolo-10.md)
     * Usare Assetic
     * Applicazioni frontend-based
-    * Saperne di più su Assetic
+    * Per saperne di più su Assetic
 
 
 11. [**I Test**](/it/capitolo-11.md)
     * Test unitari
     * Test funzionali
     * Testare Javascript
-    * Saperne di più sui test funzionali
+    * Per saperne di più sui test funzionali
 
 
 
