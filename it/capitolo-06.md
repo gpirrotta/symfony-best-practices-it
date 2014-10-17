@@ -10,7 +10,7 @@ in grado di gestire i template dell'applicazione in modo migliore.
 Usa Twig per i tuoi template
 
 Generalmente parlando, i template in PHP sono più prolissi di Twig per
-la mancanza di supporto nativo a molte caratteristiche moderne necessarie nei template moderni,
+la mancanza di supporto nativo a molte caratteristiche necessarie nei template moderni,
 come l'ereditarietà, l'escaping automatico, i filtri.
 
 Twig è il formato di default per i template in Symfony e può contare sul supporto della più grande
@@ -29,7 +29,7 @@ Solitamente gli sviluppatori Symfony mettono i template dell'applicazione nella 
 **Resources/views/** di ciascun bundle. Per riferirsi ad essi usano il nome logico
 (ad es. **AcmeDemoBundle:Default:index.html.twig**).
 
-Anche se quest'abitudine è corretta per i bundle di terzi, è molto più conveniente, invece,
+Anche se per i bundle a terzi quest'abitudine è corretta, è molto più conveniente, invece,
 inserire i template dell'applicazione nella directory **app/Resources/views/**.
 
 Innanzitutto questo semplifica drasticamente il nome logico dei template:
@@ -54,7 +54,7 @@ Definisci le estensioni di Twig nella directory `AppBundle/Twig` configurandole
 Alla nostra applicazione serve un filtro Twig personalizzato `m2html` in modo da poter
 trasformare il contenuto di ogni post da Markdown in HTML.
 
-Per fare questo, per prima cosa, installiamo l'eccellente parser Markdown
+Per fare questo, per prima cosa, installiamo l'ottimo parser Markdown
 [*ParseDown*](http://parsedown.org/) come nuova dipendenza del progetto:
 
 ```
