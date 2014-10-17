@@ -8,8 +8,8 @@ per coordinare le diversi parti dell'applicazione.
 La regola d'oro per i controller è sintetizzata nella tripla 5-10-20.
 Ogni controller dovrebbe definire al massimo 5 variabili, contenere al massimo 10 azioni,
 ciascuna delle quali formate al massimo da 20 righe di codice. Anche se possono
-esserci eccezioni occasional alla regola, essa aiuta ad orientarsi su quando
-iniziare a rifattorizzare il codice del controller per spostarlo in un servizio.
+esserci eccezioni alla regola, essa mette in evidenza quando sarebbe opportuno
+iniziare a rifattorizzare il codice del controller e spostarlo in un servizio.
 
 **Best Practice**
 Estendi il tuo controller dalla classe base `Controller` fornita dal bundle
@@ -21,8 +21,8 @@ L'accoppiamento dei controller al framework sottostante consente di sfruttare tu
 le funzionalità del framework stesso aumentando la vostra produttività.
 
 E poichè i vostri controller dovrebbero essere **sottili** e contenere
-niente di più che poche linee di *glue-code*, spendere ore provando a disaccoppiarlo
-dal framework non porterà grandi benefici nel lungo periodo.
+niente di più che poche linee di codice per coordinare il flusso della richiesta, 
+spendere ore provando a disaccoppiarlo dal framework non porterà grandi benefici nel lungo periodo.
 La quantità di tempo *sprecato* non vale il beneficio.
 
 Inoltre usare le annotazioni per le rotte, la cache e la sicurezza semplifica
@@ -30,8 +30,8 @@ enormemente la configurazione dell'applicazione.
 Non sarà necessario esplorare decine di file di formati diversi
 (YAML, XML, PHP): tutta la configurazione è lì dove ti serve e in un solo formato.
 
-Complessivamente quindi si dovrebbe disaccoppiare totalmente la logica di business
-dal framework e nello stesso tempo accoppiare totalmente al framework controller e rotte
+Complessivamente, quindi, si dovrebbe disaccoppiare totalmente la logica di business
+dal framework e nello stesso tempo accoppiare totalmente al framework controller e rotte,
 in modo da ottenere il massimo da Symfony.
 
 
@@ -72,10 +72,9 @@ tutto in sottodirectory.
 ####Configurazione del Template
 
 **Best Practice**
-
 Non usare l'annotazione **@Template()** per configurare il template usato dal controller
 
-Anche se l'annotazione **@Template()** è utile essa implica qualche *magia*. Per questo motivo
+Anche se l'annotazione **@Template()** risulta molto utile essa nasconde qualche *trabocchetto*. Per questo motivo
 si raccomanda di non usarla.
 
 La maggior parte delle volte **@Template** è usato senza parametri il che rende più difficile
@@ -198,7 +197,7 @@ public function newAction(Request $request, Post $post)
 ```
 
 Possiamo infine dire che la scorciatoia del ParamConverter è buona nelle situazioni semplici.
-Nonostante ciò non si dovrebbe dimenticare che la ricerca diretta di entity è sempre
+Nonostante ciò non si dovrebbe mai dimenticare che la ricerca diretta di entity è un'operazione 
 molto facile.
 
 #### Esecuzione di codice prima e dopo del controller
