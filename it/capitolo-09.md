@@ -1,8 +1,8 @@
 #Capitolo 9
 ## La Sicurezza
 
-####Autenticazione e Firewall
-#####(Recuperare le credenziali dell'utente)
+###Autenticazione e Firewall
+####(Recuperare le credenziali dell'utente)
 
 Per autenticare gli utenti è possibile configurare Symfony in molti modi; inoltre
 è possibile caricare le informazioni degli utenti da qualsiasi fonte. 
@@ -13,10 +13,11 @@ rimanda al [CookBook, sezione sicurezza](http://symfony.com/doc/current/cookbook
 A prescindere dalle tue necessità l'autenticazione è configurata in `security.yml`,  sotto
 la chiave `firewalls`.
 
-**Best Practice**
-A meno che non si abbia due meccanismi di autenticazione differenti (ad esempio il form login
+#####Best Practice
+
+**A meno che non si abbia due meccanismi di autenticazione differenti (ad esempio il form login
 per il sito principale e un sistema a token per le API), si raccomanda di definire un unico
-firewall con l'opzione `anonymous` abilitata.
+firewall con l'opzione `anonymous` abilitata.**
 
 La maggior parte delle applicazioni utilizza solamente un meccanismo di autenticazione e
  un insieme di utenti. Per questa tipologia di applicazioni basta soltanto un unico firewall.
@@ -26,8 +27,9 @@ La maggior parte delle applicazioni utilizza solamente un meccanismo di autentic
 Si dovrebbe inoltre abilitare sempre l'opzione `anonymous` nel tuo firewall. Se hai bisogno che gli utenti
 accedano a sezioni differenti del tuo sito utilizza la configurazione dell'opzione `access_control`.
 
-**Best Practice**
-Usare **bcrypt** per codificare le password degli utenti.
+#####Best Practice
+
+**Usare `bcrypt` per codificare le password degli utenti.**
 
 Se memorizzi le password degli utenti nel tuo sistema si raccomanda di usare l'encoder **bcrypt**,
 invece della tradizionale codifica SHA-512. I vantaggi più importanti
@@ -66,29 +68,31 @@ Il codice sorgente dell'applicazione di prova include commenti che spiegheranno
 dettagliatamente ogni parte del file.
 
 
-#### Autorizzazione
-##### (Negare l'accesso)
+### Autorizzazione
+#### (Negare l'accesso)
 
 Symfony definisce vari modi per configurare l'autorizzazione e restringere l'accesso degli utenti alle risorse.
 In particolare è possibile configurare l'opzione `access_control` in [*security.yml*](http://symfony.com/doc/current/reference/configuration/security.html),
 l'*annotation @Security* e usare il metodo *isGranted* del servizio `security.context`.
 
-**Best Practice**
-* Per la protezione di pattern URL molto grandi usa `access_control`
-* Quando possibile usa l'annotazione *@Security* - (dalla versione inglese)
-* Per proteggere singole risorse usa l'annotazione *@Security* -  (dalla traduzione spagnola)
-* Per logiche di sicurezza più complesse usa direttamente il servizio *security.context*
+#####Best Practice
+
+* **Per la protezione di pattern URL molto grandi usa `access_control`**
+* **Quando possibile usa l'annotazione `@Security`** (dalla versione inglese)
+* **Per proteggere singole risorse usa l'annotazione `@Security`**  (dalla traduzione spagnola)
+* **Per logiche di sicurezza più complesse usa direttamente il servizio `security.context`**
 
 Esistono anche diversi modi per centralizzare la logica di autorizzazione, come i
 votanti e le ACL (o lista di controllo degli accessi).
 
-**Best Practice**
-* Personalizzare un votante per definire restrizioni a grana fine
-* Usare le ACL per definire logiche di sicurezza complesse (per gestire l'accesso di ogni oggetto da ogni
-utente attraverso un'interfaccia admin).
+#####Best Practice
+
+* **Personalizzare un votante per definire restrizioni a grana fine**
+* **Usare le ACL per definire logiche di sicurezza complesse (per gestire l'accesso di ogni oggetto da ogni
+utente attraverso un'interfaccia admin).**
 
 
-#### L'annotazione @Security
+### L'annotazione @Security
 
 Per controllare l'accesso su un controller usa l'annotazione `@Security`;
 oltre ad essere di facile lettura essa è collocata sempre sopra ogni action.
@@ -114,7 +118,7 @@ public function newAction()
 }
 ```
 
-##### Usare le Espressioni per Restrizioni di Sicurezza più Complesse
+#### Usare le Espressioni per Restrizioni di Sicurezza più Complesse
 
 Se la tua logica di sicurezza è più complessa è possibile usare
 le [espressioni](http://symfony.com/doc/current/components/expression_language/introduction.html)
@@ -195,7 +199,7 @@ public function editAction(Post $post)
 {% endif %}
 ```
 
-####Controllare i permessi senza @Security
+###Controllare i permessi senza @Security
 
 L'esempio visto sopra con `@Security` funziona perchè stiamo usando *ParamConverter* che dà
 all'espressione l'accesso alla variabile `post`. Se invece *ParamConverter* non viene usato, o in presenza di
@@ -222,7 +226,7 @@ public function editAction($id)
 }
 ```
 
-#### I Votanti
+### I Votanti
 
 Se la logica di sicurezza è complessa e non può essere centralizzata in un metodo come `isAuthor()`
 si dovrebbe creare un votante personalizzato. Gestire la sicurezza con i votanti risulta più semplice
@@ -316,7 +320,7 @@ public function editAction($id)
 }
 ```
 
-####Saperne di più
+###Per saperne di più
 
 Il bundle [*FOSUserBundle*](https://github.com/FriendsOfSymfony/FOSUserBundle), sviluppato dalla comunità
 di Symfony, aggiunge il supporto alla gestione utenti memorizzati in una base di dati. Il bundle implementa
