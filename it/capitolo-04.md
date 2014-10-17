@@ -24,7 +24,8 @@ symfoy2-project/
 └─ web/
 ```
 
-#### Creare classi fuori dal bundle
+### Creare classi fuori dal bundle
+
 Non vi è alcuna limitazione tecnica che ci impedisca di mettere la logica di business
 fuori dal bundle. Se si vuole si può creare il proprio namespace
 dentro **src/** e mettere tutto là dentro:
@@ -46,7 +47,7 @@ tutto più facile da gestire. Se sei così esperto da sapere cosa è necessario 
 dentro un bundle e cosa mettere invece fuori, sentiti libero di farlo.
 
 
-#### Nomi e formati dei servizi
+### Nomi e formati dei servizi
 
 La nostra applicazione blog ha bisogno di una utility in grado di trasformare il titolo di ogni post
 (ad es. "Ciao Mondo") nel suo relativo slug (ad es. "ciao-mondo").
@@ -85,8 +86,9 @@ di utilizzare il nome e la posizione della classe per evitare collisioni di nomi
 Pertanto il servizio dovrebbe chiamarsi **app.utils.slugger**.
 Tuttavia se si usano nomi dei servizi brevi il codice risulterà più facile da leggere e da usare.
 
-**Best Practice**
-Il nome dei servizi dovrebbe essere il più breve possibile, idealmente solo una piccola parola.
+##### Best Practice
+
+**Il nome dei servizi dovrebbe essere il più breve possibile, idealmente solo una piccola parola.**
 
 Adesso è possibile usare lo slugger da ogni controller, come ad es. **AdminController**:
 
@@ -104,12 +106,13 @@ public function createAction(Request $request)
 }
 ```
 
-#### Il formato del file di configurazione YAML
+### Il formato del file di configurazione YAML
 
 Per la definizione del servizio, nella sezione precedente, è stato usato il formato YAML.
 
-**Best Practice**
-Per la definizione dei propri servizi usare il formato YAML.
+##### Best Practice
+
+**Per la definizione dei propri servizi usare il formato YAML.**
 
 Sappiamo che questa raccomandazione è molto controversa.
 Dalla nostra esperienza sappiamo che sia il formato YAML che il formato XML è
@@ -120,7 +123,7 @@ Entrambi i formati hanno le stesse performance, quindi la scelta di quale utiliz
 Noi raccomandiamo di usare YAML perchè risulta più semplice da gestire dai nuovi
 programmatori sia più conciso. Ovviamente puoi usare il formato che preferisci.
 
-#### Non definire parametri per le classi dei servizi
+### Non definire parametri per le classi dei servizi
 
 Avrete probabilmente notato che nella definizione del servizio precedente non abbiamo creato
 un parametro di configurazione per definire la classe di servizio
@@ -139,8 +142,10 @@ services:
 
 Quest'abitudine risulta scomoda e completamente non necessaria per i propri servizi:
 
-**Best Practice**
-Non definire parametri di configurazione per le classi dei servizi.
+##### Best Practice
+
+**Non definire parametri di configurazione per le classi dei servizi.**
+
 
 Quest'abitudine trae la sua origine dai bundle di terze parti.
 Se si sviluppa un bundle da condividere è possibile allora definire parametri di configurazione
@@ -148,7 +153,7 @@ per le classi. Ma se si sviluppa un servizio per la propria applicazione, non c'
 che le sue classi siano configurabili.
 
 
-#### Utilizzare lo strato di persistenza
+### Utilizzare lo strato di persistenza
 
 Symfony è un framework HTTP che si preoccupa solo di generare una risposta HTTP
 per ogni richiesta HTTP. Questo è il motivo per cui Symfony non prevede una
@@ -176,14 +181,16 @@ symfony2-project/
 
 Se sei uno sviluppatore esperto, puoi creare le tue classi nel tuo namespace in **src/**.
 
-##### Il Mapping di Doctrine
+### Il Mapping di Doctrine
 Le entità doctrine sono semplici classi PHP le cui informazioni vengono memorizzate in qualche "database".
 Le uniche informazioni conosciute da Doctrine su queste entità sono informazioni di
 mapping di metadati sul vostro modello.
 Doctrine supporta quattro formati per definire queste informazioni: YAML, XML, PHP e annotazioni.
 
-**Best Practice**
-Usare le annotazioni per definire il mapping delle entità Doctrine
+##### Best Practice
+
+**Usare le annotazioni per definire il mapping delle entità Doctrine**
+
 
 Le annotazioni sono di gran lunga il modo più conveniente e agile per definire e cercare
 le informazioni di mapping:
@@ -256,7 +263,7 @@ Tutti i formati hanno la stessa performance; la scelta su quale formato
 usare dipende, ancora una volta, dai gusti personali.
 
 
-##### Data Fixture
+#### Data Fixture
 
 In Symfony il supporto alle fixture non è abilitato di default per cui, per installare
 il bundle di gestione delle fixture in Doctrine, è necessario eseguire il seguente
@@ -305,7 +312,7 @@ Careful, database will be purged. Do you want to continue Y/N ? Y
     > loading AppBundle\DataFixtures\ORM\LoadFixtures
 ```
 
-#### Coding Standard
+### Coding Standard
 Il codice sorgente di Symfony rispetta gli standard [*PSR-1*](http://www.php-fig.org/psr/psr-1/)
 e [*PSR-2*](http://www.php-fig.org/psr/psr-2/) definiti dalla comunità PHP.
 Per saperne di più clicca su [*Symfony Code Standard*](http://symfony.com/doc/current/contributing/code/standards.html).
