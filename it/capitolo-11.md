@@ -96,7 +96,7 @@ Ovviamente se la tua applicazione usa Javascript in tutte le sue funzionalità
  dovresti considerare l'uso di tool specificatamente pensati per testare Javascript.
 
 
-###Saperne di più sui Test Funzionali
+###Per saperne di più sui Test Funzionali
 
 Usa le librerie [Faker](https://github.com/fzaninotto/Faker) e
 [Alice](https://github.com/nelmio/alice) per la generazione dei dati delle fixture.
