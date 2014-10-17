@@ -1,9 +1,9 @@
 #Capitolo 7
 ## I Form
 
-I form sono uno dei componenti Symfony più abusati; questo è dovuto sia al suo vasto campo
+I form sono uno dei componenti più abusati di Symfony; questo è dovuto sia al suo vasto campo
 di applicazione sia alla sua lista infinita di funzionalità. In questo capitolo
-ti mostreremo alcune best practices in modo da poter sfruttare velocemente la loro potenza.
+ti mostreremo alcune best practices in modo da poterli sfruttare al meglio.
 
 
 #### Creazione dei form
@@ -67,8 +67,7 @@ public function newAction(Request $request)
 ```
 
 #####Registrazione dei Form come Servizi
-E' possibile [registrare i tipi di form come servizi](http://symfony.com/doc/current/cookbook/form/create_custom_field_type.html#creating-your-field-type-as-a-service),
-anche se non si consiglia di farlo a meno che non si pianifichi di riusare lo stesso form in altri posti
+E' possibile [registrare i tipi di form come servizi](http://symfony.com/doc/current/cookbook/form/create_custom_field_type.html#creating-your-field-type-as-a-service), anche se non si consiglia di farlo a meno che non si pianifichi di riusare lo stesso form in altri posti
 o di incorporarlo all'interno di altri form usando il
 [tipo collection](http://symfony.com/doc/current/reference/forms/types/collection.html).
 
@@ -155,8 +154,8 @@ renderizzare ogni singolo campo in modo indipendente.
 
 Il modo migliore dipende dalla quantità di personalizzazione necessaria nel form.
 
-Il modo più semplice, utile specialmente durante lo sviluppo, è creare i tag
-`<form></form>` manualmente e utilizzare la funzione `form_widget()`
+Il modo più semplice, utile specialmente durante lo sviluppo, è creare manualmente i tag
+`<form></form>` e utilizzare la funzione `form_widget()`
 per renderizzare tutti i campi:
 
 ```
@@ -171,15 +170,15 @@ la chiusura dei tag del form.
 
 Gli sviluppatori più esperti si saranno accorti che nell'esempio precedente
 abbiamo creato manualmente i tag `<form>` invece di usare le funzioni `form_start()` o `form()`.
-Nonostante la comodità di queste funzioni, esse non portano tanti vantaggi
-perchè riducono la chiarezza e leggibilità del form stesso apportando solo pochi benefici.
+Nonostante la comodità di queste ultime funzioni, esse non portano molti vantaggi
+perchè riducono la chiarezza e la leggibilità del form stesso apportando quindi solo pochi benefici.
 
 
-L'unica eccezione è il form `delete` perchè è costituito solamente da un bottone e può
-beneficiare delle funzionalità messe a disposizione dal componente Twig.
+L'unica eccezione è il form `delete` perchè, essendo costituito solamente da un bottone, può
+beneficiare delle funzionalità messe a disposizione dal framework.
 
 Se si ha bisogno di un controllo più preciso sulla renderizzazione del form
-non usare la funzione `form_widget(form)` ma renderizza i campi
+non usare la funzione `form_widget(form)` ma renderizzare i campi
 individualmente.
 Per maggiori informazioni su come renderizzare i form e su come impostare un tema in modo globale
 consultare il seguente articolo
@@ -222,8 +221,8 @@ In secondo luogo si raccomand di usare `$form->isSubmitted()`
 nello statement `if` per rendere il codice più chiaro.
 
 Tecnicamente non è necessario dato che `isValid()`  esegue prima `isSubmitted()`; senza
-questo, tuttavia, il flusso risulta un po strano
- e il form sembra sia *sempre* processato (anche per le richieste GET).
+questo, tuttavia, il flusso risulterebbe un po strano
+ e il form sembrerebbe *sempre* processato, anche per le richieste GET.
 
 
 
