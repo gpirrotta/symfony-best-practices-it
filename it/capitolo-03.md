@@ -4,11 +4,12 @@
 La configurazione di un'applicazione, normalmente, coinvolge diverse parti (ad es. infrastruttura tecnologica, sicurezza, etc.)
 e diversi ambienti (sviluppo, produzione, etc.). Proprio per questo Symfony raccomanda di suddividere la configurazione in tre parti.
 
-#### Configurazione relativa all'infrastruttura
+### Configurazione relativa all'infrastruttura
 
-**Best practice**
-Definire le opzioni della configurazione relativa all'infrastruttura tecnologica
-nel file **app/config/parameters.yml**
+##### Best practice
+
+**Definire le opzioni della configurazione relativa all'infrastruttura tecnologica
+nel file app/config/parameters.yml**
 
 Il file di default **parameters.yml** segue questa regola e definisce le opzioni relative al database
 e al mail server:
@@ -37,9 +38,11 @@ con il comportamento dell'applicazione. In altre parole la tua applicazione non 
 sapere dov'è posizionato il database o come vi accede. L'unica cosa che gli importa sapere
 è che il database sia configurato correttamente.
 
-##### Parametri canonici
-**Best practice**
-Definire tutti i parametri dell'applicazione nel file **app/config/parameters.dist.yml**
+#### Parametri canonici
+
+##### Best practice
+
+**Definire tutti i parametri dell'applicazione nel file app/config/parameters.dist.yml**
 
 
 Dalla versione 2.3 Symfony include un file di configurazione chiamato **parameters.dist.yml**
@@ -54,22 +57,24 @@ eventuali differenze tra il file *canonico* **parameters.dist.yml** e il file lo
 In presenza di differenze Symfony chiederà di fornire un valore per il nuovo parametro e lo aggiungerà al file
 locale **parameters.yml**.
 
-#### Configurazione relativa all'applicazione
+### Configurazione relativa all'applicazione
 
-**Best practice**
-Definire le opzioni di configurazione relative all'applicazione nel file **app/config/config.yml**.
+##### Best practice
+
+**Definire le opzioni di configurazione relative all'applicazione nel file app/config/config.yml**.
 
 Il file **config.yml** contiene le opzioni usate dall'applicazione per modificare il suo comportamento, come ad esempio
 il mittente delle email, l'abilitazione di [*feature toggles*](http://en.wikipedia.org/wiki/Feature_toggle), etc.
 E' possibile definire questi valori anche in **parameters.yml** ma questo aggiungerebbe un livello di
 configurazione extra non necessario, perchè solitamente non si vuole che questi valori cambino su ogni server.
 
-##### Costanti o Opzioni di Configurazione
+#### Costanti o Opzioni di Configurazione
 Uno degli errori più comuni nel definire la configurazione dell'applicazione è creare nuovi opzioni per valori
 che non cambieranno mai, come ad esempio il numero degli elementi mostrati in una paginazione.
 
-**Best Practice**
-Usare costanti per definire opzioni di configurazione che cambieranno raramente
+##### Best Practice
+
+**Usare costanti per definire opzioni di configurazione che cambieranno raramente**
 
 L'approccio tradizionale della definizione delle opzioni di configurazione ha costretto molte applicazioni
 Symfony a includere opzioni come il seguente, che controlla il numero di post da mostrare
@@ -134,10 +139,11 @@ L'unico svantaggio da considerare, nell'utilizzo delle costanti come opzioni di 
 possono essere ridefinite facilmente nei test.
 
 
-#### Non usare la configurazione semantica
+### Non usare la configurazione semantica
 
-**Best Practice**
-Non definire nei tuoi bundle una configurazione semantica per il container (dependency injection).
+##### Best Practice
+
+**Non definire nei tuoi bundle una configurazione semantica per il container (dependency injection)**.
 
 Come spiegato in [*Come esporre una configurazione semantica per un Bundle*](http://symfony.com/doc/current/cookbook/bundles/extension.html)
 è possibile gestire le opzioni di configurazione in un bundle in due modi: la configurazione normale del servizio, attraverso il file
@@ -148,7 +154,7 @@ delle opzioni di configurazione, la quantità di lavoro necessaria per la defini
 e non vale la pena cimentarsi per bundle non rivolti a terzi.
 
 
-#### Definire le opzioni di configurazione sensibili al di fuori di Symfony
+### Definire le opzioni di configurazione sensibili al di fuori di Symfony
 Quando si lavora con opzioni sensibili, come le credenziali di accesso del database, si raccomanda di spostarle
 al di fuori dell'applicazione Symfony e di renderle disponibili tramite variabili d'ambiente. Impara come farlo
 nel seguete articolo: [Come settare parameteri esterni nel Service Container](http://symfony.com/doc/current/cookbook/configuration/external_parameters.html).
