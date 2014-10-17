@@ -2,7 +2,7 @@
 ## I Web Assets
 
 I Web assets sono i fogli di stile CSS, i file JavaScript e le immagini che si utilizzano nel
-frontend per renderlo accattivante. Gli sviluppatori Symfony solitamente mettono gli asset nella
+frontend per renderlo accattivante. Gli sviluppatori Symfony, solitamente, mettono gli asset nella
 directory `Resources/public/` di ogni bundle.
 
 **Best Practice**
@@ -34,7 +34,7 @@ Oggigiorno è praticamente impossibile trovare siti web che utilizzano solamente
 E' molto probabile che il tuo progetto utilizzi invece molti file Javascript e diversi file Sass o LESS per la generazione dei CSS.
 Per migliorare le perfomance lato client tutti questi file andrebbero quindi raggruppati e minimizzati.
 
-Esistono molti tool per risolvere questi problemi come ad esempio GruntJS, un tool progettato per il frontend (che non usa PHP).
+Esistono molti tool per risolvere questi problemi come ad esempio GruntJS, un tool progettato per il frontend (ma che non usa PHP).
 
 **Best Practice**
 Usare Assetic per compilare, raggruppare e minimizzare i web asset, a meno che tu non abbia dimistichezza
@@ -74,7 +74,7 @@ backend Symfony (e anche separato dai repository).
 
 ####Saperne di più su Assettic
 
-Assettic è in grado di migliorare la velocità dei siti   mininizzarndo asset CSS e Javascript
+Assettic è in grado di migliorare la velocità dei siti mininizzarndo asset CSS e Javascript
 tramite [*UglifyCSS/UglifyJS*](http://symfony.com/doc/current/cookbook/assetic/uglifyjs.html).
 E' possibile anche [comprimere immagini](http://symfony.com/doc/current/cookbook/assetic/jpeg_optimize.html)
 riducendone la dimensione prima di essere restituiti nelle richieste.
