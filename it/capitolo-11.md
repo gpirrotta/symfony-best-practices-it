@@ -1,9 +1,9 @@
 #Capitolo 11
 ##I Test
 
-Generalmente gli sviluppatori creano due tipi di test.
-Il test unitario consente di testare l'input e l'output di funzioni specifiche.
-Il test funzionale consente di simulare un "browser" con il quale è possibile navigare
+Generalmente gli sviluppatori creano due tipi di test: unitari e funzionali.
+I test unitari consentono di testare l'input e l'output di funzioni specifiche.
+I test funzionali consentono di simulare un "browser", quindi è possibile navigare
 le pagine del tuo sito, cliccare sui link, riempire i form e asserire di vedere
 certi elementi nella pagina.
 
@@ -52,7 +52,7 @@ public function provideUrls()
 
  Il codice controlla che tutti gli URL vengano caricati correttamente, cioè
  che il codice della risposta HTTP sia compreso tra `200` e `299`.
- Apparentemente potrebbe sembrare inutile ma considerando quanto poco sforzo viene fatto,
+ Apparentemente potrebbe sembrare inutile ma, considerando quanto poco sforzo viene fatto,
  è sempre un bene avere il test nella vostra applicazione.
 
 ##### Hardcodare gli URL nei test funzionali
@@ -81,7 +81,7 @@ public function testBlogArchives()
 Il test funzionerà correttamente ma avrà un grande inconveniente. Se per sbaglio uno sviluppatore
 modifica il percorso della rotta `blog_archives`, il test continuerà ancora a funzionare, ma
 l'URL originale non funzionerà più. Proprio per questo ogni bookmark di quell'URL non sarà
-più raggiungibile con conseguenze sul page ranking nei motori di ricerca.
+più raggiungibile con conseguenze anche sul page ranking nei motori di ricerca.
 
 
 #### Testare Javascript
