@@ -6,7 +6,7 @@ business rules that determine how data can be created, displayed, stored, and ch
 (leggi la [definizione completa da Wikipedia](http://en.wikipedia.org/wiki/Business_logic))
 
 Nelle applicazioni Symfony la logica di business comprende tutto il codice implementato per l'applicazione
-non relativo al framework (ad es. rotte e controller). Le classi di dominio, le entità Doctrine e
+non relativo al framework. Le classi di dominio, le entità Doctrine
 e classiche classi PHP utilizzate come servizi rappresentano buoni esempi di logica di business.
 
 Nella maggior parte dei progetti la logica di business dovrebbe essere inserita dentro **AppBundle**.
