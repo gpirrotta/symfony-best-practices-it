@@ -3,7 +3,7 @@
 
 ####Installazione di Symfony
 
-Esiste solamente un modo che raccomandiamo per l'installazione di Symfony
+Fra i tutti modi di installare Symfony ne raccomandiamo solo uno.
 
 **BEST PRACTICE**  
 **Utilizzare sempre [*Composer*](https://getcomposer.org) per installare Symfony**
@@ -37,7 +37,7 @@ Se usi un sistema Windows, scarica l'installer dalla [pagina di download di Comp
 
 #### Creazione dell'Applicazione Blog
 Adesso che tutto è correttamente configurato, possiamo creare un nuovo progetto basato su Symfony.
-Nella tua console, spostati in una directory dove hai permessi per creare file ed esegui i seguenti comandi:
+Spostati nella tua console in una directory in cui hai i permessi per creare file ed esegui i seguenti comandi:
 
 ```
 $ cd projects/
@@ -127,7 +127,7 @@ e tutta la logica di business;
 
 
 ##### I Bundle dell'Applicazione
-Quando è stato rilasciato Symfony 2.0 la maggior parte di sviluppatori hanno adottato, in modo naturale, lo stesso approccio usato
+Quando è stato rilasciato Symfony 2.0 la maggior parte di sviluppatori ha adottato, in modo naturale, lo stesso approccio usato
 in symfony 1.x suddividendo l'applicazione in moduli logici. Proprio per questo, molte applicazioni Symfony
 definiscono bundle come:  **UserBundle**, **ProductBundle**, **InvoiceBundle**, etc.
 
@@ -146,7 +146,7 @@ da capire. A partire da Symfony 2.6 la documentazione ufficiale di Symfony mostr
 Non è necessario aggiungere il prefisso della vostra azienda (*vendor*) ad **AppBundle** (es. **AcmeAppBundle**) dato
 che questo bundle, specifico dell'applicazione, non verrà mai condiviso con terzi.
 
-Detto questo la struttura di directory raccomandata di un'applicazione Symfony è la seguente:
+Detto questo, la struttura di directory raccomandata di un'applicazione Symfony è la seguente:
 
 ```
 blog/
@@ -173,7 +173,7 @@ $ php app/console generate:bundle --namespace=AppBundle --dir=src --format=annot
 
 #### Estendere la Struttura delle Directory
 Se il tuo progetto o la tua infrastruttura richiede alcune modifiche alla struttura delle directory di default,
-è possibile effettuare l'[overriding della posizione delle principali directory](http://symfony.com/doc/current/cookbook/configuration/override_dir_structure.html):
+è possibile effettuare l'[overriding della posizione delle principali directory](http://symfony.com/doc/current/cookbook/configuration/override_dir_structure.html): ad es.
 **cache/**, **logs/** and **web/**.
 
 Symfony3, inoltre, userà una struttura di directory leggermente diversa quando sarà rilasciato:
