@@ -1,20 +1,20 @@
 #Capitolo 11
-##I Test
+##I test
 
 Generalmente gli sviluppatori creano due tipi di test: unitari e funzionali.
 I test unitari consentono di testare l'input e l'output di funzioni specifiche.
 I test funzionali consentono di simulare un "browser", quindi è possibile navigare
-le pagine del tuo sito, cliccare sui link, riempire i form e asserire di vedere
+le pagine di un sito, cliccare sui link, riempire i form e asserire di vedere
 certi elementi nella pagina.
 
-###Test Unitari
-I test unitari sono usati per testare la tua "logica di business"; essa è
- totalmente indipendente dal framework motivo per cui Symfony non include al suo interno
- nessun tool per i testi unitari. Tuttavia, i tool più conosciuti sono
+###Test unitari
+I test unitari sono usati per testare la "logica di business"; essa è
+totalmente indipendente dal framework motivo per cui Symfony non include al suo interno
+nessun tool per i test unitari. Tuttavia, gli strumenti più conosciuti sono
 [PhpUnit](https://phpunit.de/) e [PhpSpec](http://www.phpspec.net/).
 
 
-###Test Funzionali
+###Test funzionali
 
 Creare buoni test funzionali può essere molto difficile, per questo motivo molti sviluppatori li
 ignorano del tutto e non effettuano nessun test. La raccomandazione è di non ignorarli.
@@ -24,7 +24,7 @@ Infatti, definendo anche solo qualche semplice test funzionale potrai individuar
 #####Best Practice
 
 **Definire il test funzionale che almeno controlli il caricamento corretto di tutte pagine
-della tua applicazione.**
+dell'applicazione.**
 
 
 Un semplice esempio di un test funzionale:
@@ -58,7 +58,7 @@ public function provideUrls()
 
 #### Hardcodare gli URL nei test funzionali
 
- Alcuni di voi si staranno chiedendo perchè nel precedente test funzionale non viene usato
+ Qualcuno potrebbe chiedersi perché nel precedente test funzionale non viene usato
  il servizio di generazione degli URL.
 
 #####Best Practice
@@ -66,7 +66,7 @@ public function provideUrls()
 **Hardcodare direttamente gli URL nei test funzionali invece di usare il generatore di URL.**
 
 
-Considera il seguente test funzionale che usa il servizio `router` per generare l'URL della
+Si consideri il seguente test funzionale, che usa il servizio `router` per generare l'URL della
 pagina testata:
 
 ```
@@ -80,24 +80,24 @@ public function testBlogArchives()
 }
 ```
 
-Il test funzionerà correttamente ma avrà un grande inconveniente. Se per sbaglio uno sviluppatore
+Il test funzionerà correttamente, ma avrà un grande inconveniente. Se per sbaglio uno sviluppatore
 modifica il percorso della rotta `blog_archives`, il test continuerà ancora a funzionare, ma
-l'URL originale non funzionerà più. Proprio per questo ogni bookmark di quell'URL non sarà
+l'URL originale non funzionerà più. Proprio per questo ogni segnalibro di quell'URL non sarà
 più raggiungibile con conseguenze anche sul page ranking nei motori di ricerca.
 
 
 ### Testare Javascript
 
-Il client fornito da Symfony per i test funzionali funziona molto bene ma non può essere usato per testare
-il comportamento di Javascript sulle tue pagine. Se ti serve questa funzionalità considera l'utilizzo della
+Il client fornito da Symfony per i test funzionali funziona molto bene, ma non può essere usato per testare
+il comportamento di Javascript sulle tue pagine. Se questa funzionalità è necessaria, considerare l'utilizzo della
 [libreria Mink](http://mink.behat.org) con PHPUnit.
 
-Ovviamente se la tua applicazione usa Javascript in tutte le sue funzionalità
- dovresti considerare l'uso di tool specificatamente pensati per testare Javascript.
+Ovviamente, se un'applicazione usa Javascript in tutte le sue funzionalità,
+si dovrebbe considerare l'uso di strumenti specificatamente pensati per testare Javascript.
 
 
-###Per saperne di più sui Test Funzionali
+###Per saperne di più sui test funzionali
 
-Usa le librerie [Faker](https://github.com/fzaninotto/Faker) e
+Usare le librerie [Faker](https://github.com/fzaninotto/Faker) e
 [Alice](https://github.com/nelmio/alice) per la generazione dei dati delle fixture.
 

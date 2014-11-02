@@ -1,5 +1,5 @@
 #Capitolo 5
-## I Controller
+## I controller
 
 Symfony segue la filosofia "*thin controllers and fat models*".
 Ciò significa che i controller dovrebbero contenere solo il codice strettamente necessario (**glue-code**)
@@ -13,15 +13,15 @@ iniziare a rifattorizzare il codice del controller e spostarlo in un servizio.
 
 ##### Best Practice
 
-**Estendi il tuo controller dalla classe base `Controller` fornita dal bundle
-FrameworkBundle e usa le annotazioni per configurare rotte, cache
+**Estendere il controller dalla classe base `Controller` fornita dal bundle
+FrameworkBundle e usare le annotazioni per configurare rotte, cache
 e sicurezza, quando possibile.**
 
 
 L'accoppiamento dei controller al framework sottostante consente di sfruttare tutte
 le funzionalità del framework stesso aumentando la vostra produttività.
 
-E poichè i vostri controller dovrebbero essere **sottili** e contenere
+E poiché i controller dovrebbero essere **sottili** e contenere
 niente di più che poche linee di codice per coordinare il flusso della richiesta, 
 spendere ore provando a disaccoppiarlo dal framework non porterà grandi benefici nel lungo periodo.
 La quantità di tempo *sprecato* non vale il beneficio.
@@ -29,14 +29,14 @@ La quantità di tempo *sprecato* non vale il beneficio.
 Inoltre usare le annotazioni per le rotte, la cache e la sicurezza semplifica
 enormemente la configurazione dell'applicazione.
 Non sarà necessario esplorare decine di file di formati diversi
-(YAML, XML, PHP): tutta la configurazione è lì dove ti serve e in un solo formato.
+(YAML, XML, PHP): tutta la configurazione è lì dove serve e in un solo formato.
 
 Complessivamente, quindi, si dovrebbe disaccoppiare totalmente la logica di business
 dal framework e nello stesso tempo accoppiare totalmente al framework controller e rotte,
 in modo da ottenere il massimo da Symfony.
 
 
-###Configurazione delle Rotte
+###Configurazione delle rotte
 
 Per caricare tutte le rotte definite nelle annotazioni dei controller del bundle
 `AppBundle` aggiungete la seguente configurazione al file principale delle rotte:
@@ -50,8 +50,8 @@ app:
 ```
 
 Questa configurazione caricherà le annotazioni da ogni controller presente sia nella
-directory **src/AppBundle/Controller/** che nelle sue sottodirectory. Se la tua
-applicazione definisce molti controller è perfettamente lecito organizzare il
+directory **src/AppBundle/Controller/** che nelle sue sottodirectory. Se
+l'applicazione definisce molti controller, è perfettamente lecito organizzare il
 tutto in sottodirectory.
 
 ```
@@ -121,15 +121,15 @@ class DefaultController extends Controller
 }
 ```
 
-###Usare il ParamConverter
+###Usare ParamConverter
 
-Se la tua applicazione usa Doctrine è possibile usare *opzionalmente* il
+Se l'applicazione usa Doctrine, è possibile usare *opzionalmente*
 [*ParamConverter*](http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html)
 per effettuare la ricerca dell'entity in modo automatico e passarla
 come argomento del controller.
 
 ##### Best Practice
-**Usa il ParamConverter per caricare automaticamente le entity Doctrine
+**Usare il ParamConverter per caricare automaticamente le entity Doctrine
 nei casi più semplici.**
 
 Per esempio:
@@ -159,7 +159,7 @@ caso in cui non venga trovato alcun **Post** verrà mostrato la pagina 404.
 #### Esecuzione di ricerche più avanzate
 
 Nell'esempio precedente tutto funziona senza nessuna configurazione
-perchè il nome della wildcard **{id}** corrisponde esattamente al nome della
+perché il nome della wildcard **{id}** corrisponde esattamente al nome della
 proprietà dell'entity. Quando questo non succede, o se si ha perfino una logica
 più complessa, la cosa più facile da fare è cercare l'entity manualmente.
 Questo è per esempio quello che succede nella classe `CommentController`  della
@@ -183,8 +183,8 @@ public function newAction(Request $request, $postSlug)
 }
 ```
 
-Naturalmente è possibile configurare il **@ParamConverter** in modo più avanzato
-perchè è abbastanza flessibile:
+Naturalmente è possibile configurare il **@ParamConverter** in modo più avanzato,
+perché è abbastanza flessibile:
 
 ```
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

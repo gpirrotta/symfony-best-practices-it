@@ -1,5 +1,5 @@
 #Capitolo 8
-## L'Internazionalizzazione
+## L'internazionalizzazione
 
 L'internazionalizzazione e la localizzazione hanno come obiettivo quello di adattare
  l'applicazione e il suo contenuto ad una specifica nazione o alla lingua dei suoi utenti.
@@ -26,10 +26,10 @@ Il componente `Translation` supporta diversi formati di file di traduzione: PHP,
 
 #####Best Practice
 
-**Usa il formato XLIFF per i tuoi file di traduzione.**
+**Usare il formato XLIFF per i file di traduzione.**
 
 Fra tutti i formati di traduzione disponibili solo XLIFF e gettext sono ampiamente
-supportati nei tool usati dai traduttori professionali. Poichè XLIFF è basato su XML,
+supportati nei tool usati dai traduttori professionali. Poiché XLIFF è basato su XML,
 è possibile validare il contenuto del file appena viene creato.
 
 Symfony 2.6 ha aggiunto il supporto per le note e commenti all'interno dei file XLIFF,
@@ -40,7 +40,7 @@ rappresentano il posto migliore per contenere queste informazioni.
 
 Il bundle [*JMSTranslationBundle*](https://github.com/schmittjoh/JMSTranslationBundle),
 sotto licenza Apache, fornisce un'interfaccia Web per la visualizzazione e la modifica
-dei file di traduzione. Inoltre dispone di uno strumento avanzato in grado di leggere il tuo
+dei file di traduzione. Inoltre dispone di uno strumento avanzato in grado di leggere il 
 progetto, estrarre il testo da tradurre dai template e automaticamente aggiornare i file XLIFF.
 
 ### La posizione dei file di traduzione
@@ -52,7 +52,7 @@ progetto, estrarre il testo da tradurre dai template e automaticamente aggiornar
 Solitamente gli sviluppatori Symfony mettono questi file nella directory `Resources/translations/`
 di ogni bundle.
 
-Poichè la directory `app/Resources/` è considerata la posizione globale delle risorse
+Poiché la directory `app/Resources/` è considerata la posizione globale delle risorse
 dell'applicazione, mettendo le traduzioni in `app/Resources/translations` esse risulteranno
 centralizzate e prioritarie su ogni altro file di traduzione. Questo consentirà di effettuare
 l'override delle traduzioni definite nei bundle di terze parti.
@@ -63,11 +63,11 @@ l'override delle traduzioni definite nei bundle di terze parti.
 
 **Per le traduzioni usare sempre chiavi invece di contenuti stringa.**
 
-Usare le chiavi semplifica la gestione dei file di traduzione poichè è possibile
-modificare il contenuto della lingua originale senza la necessità di aggiornare tutti i file
+Usare le chiavi semplifica la gestione dei file di traduzione, poiché è possibile
+modificare il contenuto della lingua originale, senza la necessità di aggiornare tutti i file
 di tutte le lingue.
 
-Le chiavi dovrebbero sempre descrivere il loro scopo e non la loro posizione. Per esempio
+Le chiavi dovrebbero sempre descrivere il loro scopo e non la loro posizione. Per esempio,
 se un form ha un campo con l'etichetta "Username", una chiave idonea sarà `label.username`
 e non `edit_form.label.username`.
 
