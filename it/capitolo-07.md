@@ -1,19 +1,19 @@
 #Capitolo 7
-## I Form
+## I form
 
 I form sono uno dei componenti più abusati di Symfony; questo è dovuto sia al suo vasto campo
-di applicazione sia alla sua lista infinita di funzionalità. In questo capitolo
-ti mostreremo alcune best practices in modo da poterli sfruttare al meglio.
+di applicazione sia alla sua lista infinita di funzionalità. In questo capitolo,
+mostreremo alcune best practices in modo da poterli sfruttare al meglio.
 
 
 ### Creazione dei form
 
 ##### Best Practices
 
-**Definisci i tuoi form come classi PHP.**
+**Definire i form come classi PHP.**
 
-Il componente `Form` ti consente di creare form direttamente dal controller.
-A meno che tu non intenda riusare il form da qualche altra parte, quest'abitudine
+Il componente `Form` consente di creare form direttamente dal controller.
+A meno che non si voglia riusare il form da qualche altra parte, quest'abitudine
 non è del tutto sbagliata.
 Nonostante ciò, per form più complessi da poter riutilizzare in altri controller
 si raccomanda di definire ogni form nella propria classe PHP.
@@ -68,7 +68,7 @@ public function newAction(Request $request)
 ```
 
 ####Registrazione dei Form come Servizi
-E' possibile [registrare i tipi di form come servizi](http://symfony.com/doc/current/cookbook/form/create_custom_field_type.html#creating-your-field-type-as-a-service), anche se non si consiglia di farlo a meno che non si pianifichi di riusare lo stesso form in altri posti
+È possibile [registrare i tipi di form come servizi](http://symfony.com/doc/current/cookbook/form/create_custom_field_type.html#creating-your-field-type-as-a-service), anche se non si consiglia di farlo a meno che non si pianifichi di riusare lo stesso form in altri posti
 o di incorporarlo all'interno di altri form usando il
 [tipo collection](http://symfony.com/doc/current/reference/forms/types/collection.html).
 
@@ -134,7 +134,7 @@ class PostController extends Controller
 }
 ```
 
-Anche questa soluzione è sbagliata perchè si sta mischiando codice markup relativo
+Anche questa soluzione è sbagliata perché si sta mischiando codice markup relativo
 alla presentazione (etichette, classi CSS, etc) con puro codice PHP.
 La separazione delle competenze è una buona regola da seguire sempre.
 Proprio per questo tutto ciò che è relativo alla vista deve essere messo nel *view* layer:
@@ -174,10 +174,10 @@ la chiusura dei tag del form.**
 Gli sviluppatori più esperti si saranno accorti che nell'esempio precedente
 abbiamo creato manualmente i tag `<form>` invece di usare le funzioni `form_start()` o `form()`.
 Nonostante la comodità di queste ultime funzioni, esse non portano molti vantaggi
-perchè riducono la chiarezza e la leggibilità del form stesso apportando quindi solo pochi benefici.
+perché riducono la chiarezza e la leggibilità del form stesso apportando quindi solo pochi benefici.
 
 
-L'unica eccezione è il form `delete` perchè, essendo costituito solamente da un bottone, può
+L'unica eccezione è il form `delete` perché, essendo costituito solamente da un bottone, può
 beneficiare delle funzionalità messe a disposizione dal framework.
 
 Se si ha bisogno di un controllo più preciso sulla renderizzazione del form

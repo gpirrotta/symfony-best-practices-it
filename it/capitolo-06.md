@@ -8,24 +8,24 @@ in grado di gestire i template dell'applicazione in modo migliore.
 
 #####Best Practice
 
-**Usa Twig per i tuoi template**
+**Usare Twig per i template**
 
-Generalmente parlando, i template in PHP sono più prolissi di Twig per
+Generalmente parlando, i template in PHP sono più prolissi di Twig, per
 la mancanza di supporto nativo a molte caratteristiche necessarie nei template moderni,
-come l'ereditarietà, l'escaping automatico, i filtri.
+come l'ereditarietà, l'escape automatico, i filtri.
 
-Twig è il formato di default per i template in Symfony e può contare sul supporto della più grande
-comunità di utenti fra tutti gli engine non PHP (è usato in progetti molto importanti come Drupal 8).
+Twig è il formato predefinito per i template in Symfony e può contare sul supporto della più grande
+comunità di utenti fra tutti gli engine non PHP (è usato in progetti molto importanti, come Drupal 8).
 
-Inoltre Twig è l'unico formato con supporto garantito in Symfony 3.0.
+Inoltre, Twig è l'unico formato con supporto garantito in Symfony 3.0.
 Il formato PHP potrebbe non essere più supportato ufficialmente.
 
 
-###Posizione dei Template
+###Posizione dei template
 
 ##### Best Practice
 
-**Inserisci tutti i template della tua applicazione nella directory app/Resource/views/**.
+**Inserire tutti i template dell'applicazione nella directory app/Resource/views/**.
 
 Solitamente gli sviluppatori Symfony mettono i template dell'applicazione nella directory
 **Resources/views/** di ciascun bundle. Per riferirsi ad essi usano il nome logico
@@ -51,10 +51,10 @@ Essi non dovranno cercare più i template in tante directory sparpagliate fra i 
 
 #####Best Practice
 
-**Definisci le estensioni di Twig nella directory `AppBundle/Twig` configurandole
- nel file `app/config/services.yml`**
+**Definire le estensioni di Twig nella directory `AppBundle/Twig` configurandole
+nel file `app/config/services.yml`**
 
-Alla nostra applicazione serve un filtro Twig personalizzato `m2html` in modo da poter
+All'applicazione serve un filtro Twig personalizzato `m2html` in modo da poter
 trasformare il contenuto di ogni post da Markdown in HTML.
 
 Per fare questo, per prima cosa, installiamo l'ottimo parser Markdown
@@ -141,8 +141,8 @@ class AppExtension extends \Twig_Extension
 }
 ```
 Per poter utilizzare l'estensione di Twig nell'applicazione definiamo un nuovo
-servizio taggandolo con `twig.extension` (il nome del servizio è irrilevante perchè
-non verrà mai usato nel proprio codice).
+servizio, assegnandogli il tag `twig.extension` (il nome del servizio è irrilevante, perché
+non verrà mai usato nel codice).
 
 ```
 # app/config/services.yml

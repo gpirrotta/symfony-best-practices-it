@@ -33,8 +33,8 @@ parameters:
 
 ```
 
-Queste opzioni non sono definite nel file **app/config/config.yml** perchè non hanno niente a che fare
-con il comportamento dell'applicazione. In altre parole la tua applicazione non si deve preoccupare di
+Queste opzioni non sono definite nel file **app/config/config.yml** perché non hanno niente a che fare
+con il comportamento dell'applicazione. In altre parole, l'applicazione non si deve preoccupare di
 sapere dov'è posizionato il database o come vi accede. L'unica cosa che gli importa sapere
 è che il database sia configurato correttamente.
 
@@ -47,7 +47,7 @@ sapere dov'è posizionato il database o come vi accede. L'unica cosa che gli imp
 
 Dalla versione 2.3 Symfony include un file di configurazione chiamato **parameters.dist.yml**
 che contiene tutti i parametri di configurazione che devono essere
-definiti affinchè l'applicazione funzioni correttamente.
+definiti affinché l'applicazione funzioni correttamente.
 
 Ogni qualvolta viene definito un nuovo parametro di configurazione per l'applicazione, esso dovrebbe
 essere aggiunto a questo file e tale modifica dovrebbe essere registrata anche sul vostro
@@ -65,8 +65,8 @@ locale **parameters.yml**.
 
 Il file **config.yml** contiene le opzioni usate dall'applicazione per modificare il suo comportamento, come ad esempio
 il mittente delle email, l'abilitazione di [*feature toggles*](http://en.wikipedia.org/wiki/Feature_toggle), etc.
-E' possibile definire questi valori anche in **parameters.yml** ma questo aggiungerebbe un livello di
-configurazione extra non necessario, perchè solitamente non si vuole che questi valori cambino su ogni server.
+È possibile definire questi valori anche in **parameters.yml** ma questo aggiungerebbe un livello di
+configurazione extra non necessario, perché solitamente non si vuole che questi valori cambino su ogni server.
 
 #### Costanti o Opzioni di Configurazione
 Uno degli errori più comuni nel definire la configurazione dell'applicazione è creare nuovi opzioni per valori

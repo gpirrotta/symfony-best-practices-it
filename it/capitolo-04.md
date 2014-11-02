@@ -115,13 +115,13 @@ Per la definizione del servizio, nella sezione precedente, è stato usato il for
 **Per la definizione dei propri servizi usare il formato YAML.**
 
 Sappiamo che questa raccomandazione è molto controversa.
-Dalla nostra esperienza sappiamo che sia il formato YAML che il formato XML è
+Dalla nostra esperienza, sappiamo che sia il formato YAML sia il formato XML sono
 ugualmente utilizzato tra gli sviluppatori, con una leggere preferenza verso YAML.
-Entrambi i formati hanno le stesse performance, quindi la scelta di quale utilizzare
+Entrambi i formati hanno le stesse prestazioni, quindi la scelta di quale utilizzare
 è una questione di gusti personali.
 
-Noi raccomandiamo di usare YAML perchè risulta più semplice da gestire dai nuovi
-programmatori sia più conciso. Ovviamente puoi usare il formato che preferisci.
+Si raccomanda di usare YAML, perché risulta più semplice da gestire dai nuovi
+programmatori sia più conciso. Ovviamente si può usare il formato che si preferisce.
 
 ### Non definire parametri per le classi dei servizi
 
@@ -158,7 +158,7 @@ che le sue classi siano configurabili.
 Symfony è un framework HTTP che si preoccupa solo di generare una risposta HTTP
 per ogni richiesta HTTP. Questo è il motivo per cui Symfony non prevede una
 sua modalità per comunicare con lo strato di persistenza (ad es. database, API esterne)
-E' possibile quindi scegliere la libreria o strategia preferita
+È possibile quindi scegliere la libreria o strategia preferita
 per colmare questa carenza.
 
 In pratica però molte applicazioni Symfony usano [Doctrine](http://www.doctrine-project.org/)
@@ -179,12 +179,12 @@ symfony2-project/
          └─ User.php
 ```
 
-Se sei uno sviluppatore esperto, puoi creare le tue classi nel tuo namespace in **src/**.
+Per gli sviluppatori esperti, si possono creare classi in un namespace in **src/**.
 
 ### Il Mapping di Doctrine
 Le entità doctrine sono semplici classi PHP le cui informazioni vengono memorizzate in qualche "database".
 Le uniche informazioni conosciute da Doctrine su queste entità sono informazioni di
-mapping di metadati sul vostro modello.
+mapping di metadati sul modello.
 Doctrine supporta quattro formati per definire queste informazioni: YAML, XML, PHP e annotazioni.
 
 ##### Best Practice

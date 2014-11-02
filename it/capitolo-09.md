@@ -1,7 +1,7 @@
 #Capitolo 9
-## La Sicurezza
+## La sicurezza
 
-###Autenticazione e Firewall
+###Autenticazione e firewall
 ####(Recuperare le credenziali dell'utente)
 
 Per autenticare gli utenti è possibile configurare Symfony in molti modi; inoltre
@@ -20,21 +20,21 @@ per il sito principale e un sistema a token per le API), si raccomanda di defini
 firewall con l'opzione `anonymous` abilitata.**
 
 La maggior parte delle applicazioni utilizza solamente un meccanismo di autenticazione e
- un insieme di utenti. Per questa tipologia di applicazioni basta soltanto un unico firewall.
- Ovviamente esistono delle eccezioni ad esempio quando nel tuo sito devi proteggere delle API dalla sezione web.
- L'importante è mantenere le cose semplici.
+un insieme di utenti. Per questa tipologia di applicazioni basta soltanto un unico firewall.
+Ovviamente esistono delle eccezioni, ad esempio quando in un sito si devono proteggere delle API dalla sezione web.
+L'importante è mantenere le cose semplici.
 
-Si dovrebbe inoltre abilitare sempre l'opzione `anonymous` nel tuo firewall. Se hai bisogno che gli utenti
-accedano a sezioni differenti del tuo sito utilizza la configurazione dell'opzione `access_control`.
+Si dovrebbe inoltre abilitare sempre l'opzione `anonymous` nel firewall. Se si ha bisogno che gli utenti
+accedano a sezioni differenti del sito, utilizzare la configurazione dell'opzione `access_control`.
 
 #####Best Practice
 
 **Usare `bcrypt` per codificare le password degli utenti.**
 
-Se memorizzi le password degli utenti nel tuo sistema si raccomanda di usare l'encoder **bcrypt**,
+Se si memorizzano le password degli utenti nel sistema, si raccomanda di usare l'encoder **bcrypt**,
 invece della tradizionale codifica SHA-512. I vantaggi più importanti
 di **bcrypt** sono l'inclusione di un valore *salt* per la protezione contro gli attacchi di tipo *rainbow table*
-e la sua natura adattiva che consente di rallentare la sua esecuzione e resistere meglio agli attacchi di forza bruta.
+e la sua natura adattiva, che consente di rallentare la sua esecuzione e resistere meglio agli attacchi di forza bruta.
 
 
 Detto questo ecco un esempio di autenticazione della nostra applicazione che usa un form login per caricare
@@ -118,9 +118,9 @@ public function newAction()
 }
 ```
 
-#### Usare le Espressioni per Restrizioni di Sicurezza più Complesse
+#### Usare le espressioni per restrizioni di sicurezza più complesse
 
-Se la tua logica di sicurezza è più complessa è possibile usare
+Se la logica di sicurezza è più complessa, è possibile usare
 le [espressioni](http://symfony.com/doc/current/components/expression_language/introduction.html)
 dentro `@Security`. Nel seguente esempio l'utente potrà accedere al controller solamente se la sua email
 corrisponde al valore ritornato dal metodo `getAuthorEmail` dell'oggetto `Post`:
@@ -154,7 +154,7 @@ Per ottenere questo comportamento si dovrà ripetere il codice dell'espressione 
 {% endif %}
 ```
 
-La soluzione più facile - se la tua logica è abbastanza semplice - è aggiungere un nuovo metodo
+La soluzione più facile, se la logica è abbastanza semplice, è aggiungere un nuovo metodo
 all'entità `Post` per controllare se un certo utente è l'autore del post.
 
 ```
@@ -201,7 +201,7 @@ public function editAction(Post $post)
 
 ###Controllare i permessi senza @Security
 
-L'esempio visto sopra con `@Security` funziona perchè stiamo usando *ParamConverter* che dà
+L'esempio visto sopra con `@Security` funziona perché stiamo usando *ParamConverter* che dà
 all'espressione l'accesso alla variabile `post`. Se invece *ParamConverter* non viene usato, o in presenza di
 casi d'uso più avanzati, è sempre possibile effettuare il controllo da codice PHP:
 
@@ -291,7 +291,7 @@ services:
             - { name: security.voter }
 ```
 
-E' adesso possibile usare il votante dentro `@Security`:
+È adesso possibile usare il votante dentro `@Security`:
 
 ```
 /**
@@ -304,7 +304,7 @@ public function editAction(Post $post)
 }
 ```
 
-E' possibile usare il votante direttamente dal controller tramite il servizio `security.context`:
+È possibile usare il votante direttamente dal controller tramite il servizio `security.context`:
 
 ```
 /**
@@ -326,13 +326,13 @@ Il bundle [*FOSUserBundle*](https://github.com/FriendsOfSymfony/FOSUserBundle), 
 di Symfony, aggiunge il supporto alla gestione utenti memorizzati in una base di dati. Il bundle implementa
 la gestione di task comuni come la registrazione utente e la funzionalità di recupero password.
 Per consentire agli utenti di loggarsi solo una volta senza dover reinserire
- la password ogni volta che visitano il tuo sito , abilita la
+la password ogni volta che visitano il sito , abilitaire la
 funzionalità [*Remember Me*](http://symfony.com/doc/current/cookbook/security/remember_me.html)
 
 Nel fornire assistenza ai clienti a volte è necessario accedere all'applicazione come *altri* utenti in modo
 da poter riprodurre il problema. Symfony fornisce l'abilità di
 [*impersonificare gli utenti*](http://symfony.com/doc/current/cookbook/security/impersonating_user.html).
 
-Se la vostra azienda usa un metodo di login non supportato da Symfony è possibile sviluppare il
+Se un'azienda usa un metodo di login non supportato da Symfony, è possibile sviluppare il
 [*proprio user provider*](http://symfony.com/doc/current/cookbook/security/custom_provider.html) e il
 [*proprio authentication provider*](http://symfony.com/doc/current/cookbook/security/custom_authentication_provider.html).

@@ -17,7 +17,7 @@ Lo scopo di questa guida è quello di risolvere il problema sopra menzionato sta
 Sappiamo che le vecchie abitudini sono dure a morire e qualcuno potrebbe meravigliarsi o non essere d'accordo con alcune di queste regole. Nonostante ciò, crediamo che seguendo questi consigli potrete sviluppare le applicazioni più velocemente, con una minore complessità e con la stessa o perfino una migliore qualità. Inoltre le raccomandazioni saranno continuamente aggiornate e migliorate.
 
 
-In ogni caso, considerate che le raccomandazioni sono opzionali e che voi e il vostro team potete adottarle come no. Se preferite continuare a sviluppare utilizzando le vostre pratiche e metodologie continuate a farlo. Symfony è abbastanza flessibile da adattarsi alle vostre necessità e questo non cambierà mai.
+In ogni caso, considerare che le raccomandazioni sono opzionali e che voi e il vostro team potete adottarle oppure no. Se preferite continuare a sviluppare utilizzando le vostre pratiche e metodologie continuate a farlo. Symfony è abbastanza flessibile da adattarsi alle vostre necessità e questo non cambierà mai.
 
 
 ### A chi è rivolto il libro? (Nota: non è un Tutorial)
